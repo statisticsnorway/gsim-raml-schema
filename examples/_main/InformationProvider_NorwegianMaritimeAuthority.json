@@ -1,0 +1,24 @@
+{
+  "id": "79945ada-de3e-4742-82c0-98d908beec7b",
+  "name": [
+    {
+      "languageCode": "en",
+      "languageText": "SDIR"
+    }
+  ],
+  "description": [
+    {
+      "languageCode": "en",
+      "languageText": "Norwegian Maritime Authority"
+    }
+  ],
+  "administrativeStatus": "OPEN",
+  "version": "1.0.0",
+  "versionValidFrom": "2010-01-01T15:00:00.000Z",
+  "validFrom": "2010-01-01T15:00:00.000Z",
+  "createdDate": "2010-01-01T15:00:00.000Z",
+  "createdBy":  "OBV",
+  "agentInRoles": [
+    "/AgentInRole/3896395b-38f7-4045-bcf2-ca18ca18b1b0"
+  ]
+}

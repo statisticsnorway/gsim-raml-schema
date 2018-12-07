@@ -1,0 +1,24 @@
+{
+  "id": "0fadb1f5-cf8f-44d2-aec9-034b6836237c",
+  "name": [
+    {
+      "languageCode": "en",
+      "languageText": "DataQuality"
+    }
+  ],
+  "description": [
+    {
+      "languageCode": "en",
+      "languageText": "The data quality of the measurement component estimated."
+    }
+  ],
+  "administrativeStatus": "OPEN",
+  "version": "1.0.0",
+  "versionValidFrom": "2018-01-01T00:00:00.000Z",
+  "validFrom": "2018-01-01T00:00:00.000Z",
+  "createdDate": "2018-01-01T00:00:00.000Z",
+  "createdBy": "OHV",
+  "attachmentLevel": "OBSERVATION",
+  "representedVariable": "/RepresentedVariable/51d14a9d-cf08-4d12-a680-0e97a7288ef6",
+  "shortName": "DATA_QUALITY"
+}

@@ -1,0 +1,15 @@
+﻿#%RAML 1.0 Library
+uses:
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+
+types:
+
+  InformationProvider:
+    description: An Individual or Organization that provides collected information.
+    displayName: Information provider
+    type: IdentifiableArtefact.IdentifiableArtefact
+
+    properties:
+
+
+    example: !include ../examples/_main/InformationProvider_NorwegianMaritimeAuthority.json

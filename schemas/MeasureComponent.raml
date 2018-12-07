@@ -1,0 +1,14 @@
+﻿#%RAML 1.0 Library
+uses:
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  DataStructureComponent: ./abstract/DataStructureComponent.raml
+
+types:
+  MeasureComponent:
+    description: The role given to a Represented Variable in the context of a Data Structure to hold the observed/derived values for a particular Unit in an organized collection of data.
+    displayName: Measure component
+    type: [ IdentifiableArtefact.IdentifiableArtefact, DataStructureComponent.DataStructureComponent ]
+
+    properties:
+
+    example: !include ../examples/_main/MeasureComponent_PersonGender.json

@@ -1,0 +1,77 @@
+﻿#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  MultilingualText: ./abstract/MultilingualText.raml
+
+types:
+  ProvisionAgreement:
+    description: The legal or other basis by which two parties agree to exchange data.
+    displayName: Provision agreement
+    type: IdentifiableArtefact.IdentifiableArtefact
+
+    properties:
+      informationProviders?:
+        type: string[]
+        displayName: Information providers
+        (Link.types): [InformationProvider]
+
+      regulation:
+        type: string
+        description: Legal or lawful basis to collect data
+        displayName: Regulation
+        enum:
+          - VOLUNTARY
+          - MANDATORY
+          - ADMINISTRATIVE_REGISTER
+
+      provisionAgreementStatus:
+        type: string
+        description: Provision agreement status
+        displayName: Provision Agreement Status
+        enum:
+          - DRAFT
+          - INTERNAL
+          - OPEN
+          - DEPRECATED
+
+      valuation?:
+        type: string
+        description:  #TODO: Something to do with GDPR
+        displayName: Valuation
+        enum:  #TODO: example of categories
+          - A
+          - B
+          - C
+          - D
+          - E
+
+
+      changeManagement?:
+        type: MultilingualText.MultilingualText[]
+        displayName: Change management
+        description: Change management
+
+      informationSource:
+        type: MultilingualText.MultilingualText[]
+        displayName: Information source
+        description: External source
+
+      exchangeChannels?:
+        type: string[]
+        displayName: Exchange channels
+        (Link.types): [ExchangeChannel]
+
+      frequency:
+        type: string
+        description: The time frequency at which data is collected at regular intervals.
+        displayName: Frequency
+        enum:
+          - ONGOING
+          - DAILY
+          - WEEKLY
+          - MONTHLY
+          - ANNUAL
+
+
+    example: !include ../examples/_main/ProvisionAgreement_NorwegianMaritimeAuthority.json

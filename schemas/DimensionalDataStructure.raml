@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  DataStructure: ./abstract/DataStructure.raml
+
+types:
+  DimensionalDataStructure:
+    description: Describes the structure of a Dimensional Data Set.
+    displayName: Dimensional data structure
+    type: [ IdentifiableArtefact.IdentifiableArtefact, DataStructure.DataStructure ]
+
+    properties:
+      identifierComponents:
+        type: string[]
+        displayName: Identifier components
+        (Link.types): [IdentifierComponent]
+
+      measureComponents:
+        type: string[]
+        displayName: Measure components
+        (Link.types): [MeasureComponent]
+
+      attributeComponents?:
+        type: string[]
+        displayName: Attribute components
+        (Link.types): [AttributeComponent]

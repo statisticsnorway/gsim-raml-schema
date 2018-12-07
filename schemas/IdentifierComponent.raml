@@ -1,0 +1,36 @@
+﻿#%RAML 1.0 Library
+uses:
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  DataStructureComponent: ./abstract/DataStructureComponent.raml
+
+types:
+  IdentifierComponent:
+    description: The role given to a Represented Variable in the context of a Data Structure to identify the unit in an organized collection of data.
+    displayName: Identifier component
+    type: [ IdentifiableArtefact.IdentifiableArtefact, DataStructureComponent.DataStructureComponent ]
+
+    properties:
+      isUnique?:
+        type: boolean
+        description: Indicates if the key is unique
+        displayName: Is unique
+
+      isComposite?:
+        type: boolean
+        description: Indicates is the key is composite
+        displayName: Is composite
+
+      role?:
+        type: string
+        description: Specifies the type of id represented (entity, indicator, count, time, geography)
+        displayName: Role
+        enum:
+          - ENTITY
+          - IDENTITY
+          - COUNT
+          - TIME
+          - GEO
+
+    examples:
+      example1: !include ../examples/_main/IdentifierComponent_FamilyIdentfierNumber.json
+      example2: !include ../examples/_main/IdentifierComponent_PersonNationalIdentfierNumber.json

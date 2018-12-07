@@ -1,0 +1,14 @@
+﻿#%RAML 1.0 Library
+uses:
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  ProcessInput: ./abstract/ProcessInput.raml
+types:
+
+  TransformableInput:
+    description: A type of <i>Process Input</i> whose content goes into a <i>Process Step</i> and is changed in some way by the execution of that <i>Process Step</i>. Some or all of the content will be represented in the <i>Transformed Output.</i>
+    displayName: Transformable input
+    type: [IdentifiableArtefact.IdentifiableArtefact, ProcessInput.ProcessInput]
+    properties:
+
+    #example: !include ../examples/TransformableInput.json
+

@@ -1,0 +1,42 @@
+﻿#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+
+types:
+
+  BusinessProcess:
+    description: The set of Process Steps to perform one of more Business Functions to deliver a Statistical Program Cycle or Statistical Support Program.
+    displayName: Business process
+    type: IdentifiableArtefact.IdentifiableArtefact
+    properties:
+
+      processSteps:
+        type: string[]
+        displayName: Process steps
+        (Link.types): [ProcessStep]
+
+      businessFunctions?:
+        type: string[]
+        displayName: Business functions
+        (Link.types): [BusinessFunction]
+
+      businessServices?:
+        type: string[]
+        displayName: Business services
+        (Link.types): [BusinessService]
+
+
+      dateInitiated?: #TODO  Could this be the same as IdentefiableArtefact.validFrom ?
+        type: datetime
+        description: First date of validity.
+        displayName: Date initiated
+
+      dateEnded?:     #TODO  Could this be the same as IdentefiableArtefact.validUntil ?
+        type: datetime
+        description: Last date of validity.
+        displayName: Date ended
+
+
+
+    #example: !include ../examples/Sirius/BusinessProcessExampleSamleinnHendelserSkatt.json

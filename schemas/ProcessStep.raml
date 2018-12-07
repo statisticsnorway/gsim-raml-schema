@@ -1,0 +1,34 @@
+﻿#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+
+types:
+
+  ProcessStep:
+    description: A Process Step is a work package that performs a Business Process. A Process Step implements the Process Step Design specified in order to produce the outputs for which the Process Step was designed.
+    displayName: Process step
+    type: IdentifiableArtefact.IdentifiableArtefact
+    properties:
+      isComprehensive: # TODO:Is this oboslete as we also have parentProcessStep?
+        type: boolean
+        description: Used to indicate whether this ProcessStep has sub-ProcessSteps.
+        displayName: Is comprehensive
+
+      parentProcessStep?: #TODO: Should this be an array ?
+        type: string
+        displayName: Parent process step
+        (Link.types): [ProcessStep]
+
+      processStepInstances?:
+        type: string[]
+        displayName: Process step instances
+        (Link.types): [ProcessStepInstance]
+
+      processControl: #TODO: should this instead be optional ?
+        type: string
+        displayName: Process control
+        (Link.types): [ProcessControl]
+
+
+  #example: !include ../examples/Sirius/ProcessStepExamplePseudonymiser.json

@@ -1,0 +1,44 @@
+﻿#%RAML 1.0 Library
+uses:
+  Link: ../annotation/Link.raml
+
+types:
+
+  DataSet:
+    description: An organized collection of data.
+
+    properties:
+      dataSetState:
+        type: string
+        description: The type of "steady state" for the dataset.
+        displayName: Data set state
+        enum:
+          - RAW_DATA
+          - INPUT_DATA
+          - PROCESSED_DATA
+          - OUTPUT_DATA
+          - DATA_PRODUCT
+          - OTHER_DATA
+
+      temporalityType?:
+        type: string
+        description: Dataset temporality
+        displayName: Temporality type
+        enum:
+          - EVENT
+          - STATUS
+          - ACCUMULATED
+          - FIXED
+
+      dataExistsFromDate?:
+        type: datetime
+        description: The date on which data is effective or valid.
+
+      dataExistsUntilDate?:
+        type: datetime
+        description: The date on which data is no longer effective or valid.
+
+      dataResources?:
+        type: string[]
+        displayName: Data resources
+        (Link.types): [DataResource]

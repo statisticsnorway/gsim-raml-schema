@@ -1,0 +1,29 @@
+﻿#%RAML 1.0 Library
+uses:
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  DataStructureComponent: ./abstract/DataStructureComponent.raml
+
+types:
+  AttributeComponent:
+    description: The role given to a Represented Variable in the context of a Data Structure, which supplies information other than identification or measures.
+    displayName: Attribute component
+    type: [ IdentifiableArtefact.IdentifiableArtefact, DataStructureComponent.DataStructureComponent ]
+
+    properties:
+      assignmentStatus?:
+        type: string
+        description: When there is an attribute in a DimensionalDataStructure, this sets a status to indicate whether it is mandatory or optional to include it in that particular DimensionalDataSet
+        displayName: Assignment status
+
+      attachmentLevel?:
+        type: string
+        description: For a certain attachment, this describes at what level the attachment is at (DataSet, Observation, Series, Group)
+        displayName: Attachment level
+        enum:
+          - OBSERVATION
+          - DATASET
+          - SERIES
+
+
+
+    example: !include ../examples/_main/AttributeComponent_Estimated.json

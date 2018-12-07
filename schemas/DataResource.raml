@@ -1,0 +1,25 @@
+﻿#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  InformationResource: ./abstract/InformationResource.raml
+
+types:
+
+  DataResource:
+    description: An organized collection of stored information made of one or more Data Sets.
+    displayName: Data resource
+    type: [IdentifiableArtefact.IdentifiableArtefact, InformationResource.InformationResource]
+
+    properties:
+      parentDataResource?:
+        type: string
+        displayName: Parent data resource
+        (Link.types): [DataResource]
+
+      dataResourceType?:
+        type: string
+        displayName: Data resource type
+        enum:
+          - STATISTICAL_REGISTER_PERSONS
+          - ETABLISHMENT_ENTERPRISE_REGISTER

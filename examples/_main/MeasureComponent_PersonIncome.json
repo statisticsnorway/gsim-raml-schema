@@ -1,0 +1,23 @@
+{
+  "id": "52d48b37-5468-4eba-a872-451abb64133e",
+  "name": [
+    {
+      "languageCode": "en",
+      "languageText": "Income"
+    }
+  ],
+  "description": [
+    {
+      "languageCode": "en",
+      "languageText": "The person's annual income"
+    }
+  ],
+  "administrativeStatus": "OPEN",
+  "version": "1.0.0",
+  "versionValidFrom": "2018-01-01T00:00:00.000Z",
+  "validFrom": "2018-01-01T00:00:00.000Z",
+  "createdDate": "2018-01-01T00:00:00.000Z",
+  "createdBy": "BNJ",
+  "representedVariable": "/RepresentedVariable/217a2c16-0a87-486c-b0c0-1580d9ad830a",
+  "shortName": "INCOME"
+}

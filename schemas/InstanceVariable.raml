@@ -1,0 +1,39 @@
+﻿#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+
+types:
+  InstanceVariable:
+    description: The use of a Represented Variable within a Data Set. It may include information about the source of the data.
+    displayName: Instance variable
+    type: IdentifiableArtefact.IdentifiableArtefact
+
+    properties:
+      representedVariable:
+        type: string
+        displayName: Represented variable
+        (Link.types): [RepresentedVariable]
+
+      population:
+        type: string
+        displayName: Population
+        (Link.types): [Population]
+
+      sentinelValueDomain?:
+        type: string
+        displayName: Sentinel value domain
+        (Link.types): [EnumeratedValueDomain, DescribedValueDomain]
+
+      sourceName?:
+        type: string
+        description: The name of the source-element/field/variable, e.g. Income or Age in the raw dataset.
+        displayName: Source name
+
+      sourcePath?:
+        type: string
+        description: The path to source-element/field/variable, e.g. Xpath /Persons/Person in the raw dataset.
+        displayName: Source path
+
+
+    example: !include ../examples/_main/InstanceVariable_FamilyType.json

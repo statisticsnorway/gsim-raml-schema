@@ -1,0 +1,15 @@
+﻿#%RAML 1.0 Library
+uses:
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+
+types:
+
+  MeasurementType:
+    description: The <i>Measurement Type</i> defines the type of a measure e.g. mass or currency. The <i>Measurement Type</i> groups all <i>Measurement Units</i>, which can be converted into each other. A <i>Measurement Type</i> can have a standard <i>Measurement Unit</i>, which can be used for conversion between different <i>Measurement Units</i>.
+    displayName: Measurement type
+    type:  IdentifiableArtefact.IdentifiableArtefact
+
+    properties:
+
+
+    example: !include ../examples/_main/MeasurementType_Currency.json

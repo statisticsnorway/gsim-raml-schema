@@ -1,0 +1,5 @@
+/.idea
+*.iml
+/test/
+/jsonschemas/
+*.DS_Store

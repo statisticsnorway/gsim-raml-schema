@@ -1,0 +1,26 @@
+{
+  "id": "6b163989-deeb-4eb3-a749-442d4fbf2e56",
+  "name": [
+    {
+      "languageCode": "en",
+      "languageText": "National person identifier"
+    }
+  ],
+  "description": [
+    {
+      "languageCode": "en",
+      "languageText": "National identifier number for person"
+    }
+  ],
+  "administrativeStatus": "OPEN",
+  "version": "1.0.0",
+  "versionValidFrom": "2018-01-01T00:00:00.000Z",
+  "validFrom": "2018-01-01T00:00:00.000Z",
+  "createdDate": "2018-01-01T00:00:00.000Z",
+  "createdBy": "BNJ",
+  "isUnique": true,
+  "isComposite": false,
+  "role": "ENTITY",
+  "representedVariable": "/RepresentedVariable/6cdecd72-c4a8-4b56-9c0a-9fd01c4fea56",
+  "shortName": "PERSON_ID"
+}
