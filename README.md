@@ -1,10 +1,12 @@
 # gsim-raml-schema
-RAML documentation of Statistic Norways information model based on [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model).
+Statistics Norway is modernizing its core systems for statistical production. Statistics Norway implements a logical data model based on the UN standard [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model).
 
-<a href="ssb_gsim_ldm.png"><img src="ssb_gsim_ldm.png" height="360" width="300"></a>
+This project is documentation of the physical design using RAML.
 
 The intention is to have all GSIM objects and attributes represented as RAML-files.
 
+Image of the logical data model (LDM):
+<a href="ssb_gsim_ldm.png"><img src="ssb_gsim_ldm.png" height="360" width="300"></a>
 
 
 ## RAML
