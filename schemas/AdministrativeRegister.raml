@@ -11,18 +11,10 @@ types:
     type: [ IdentifiableArtefact.IdentifiableArtefact, ExchangeChannel.ExchangeChannel ]
 
     properties:
-      supplierIdentifier:  # TODO: Whats the difference of this and registerType ?
+      supplierIdentifier:
         type: string
         description: An identifier for the supplier of the Administrative Register
         displayName: Supplier identifier
 
-      registerType?:
-        type: string
-        description: Type of register
-        displayName: Registertype
-        enum:
-          - CENTRAL_POPULATION_REGISTER
-          - LEGAL_ENTITIES_REGISTER
-          # TODO: What about Matrikkelen. Same goes for DataResource
 
 #    example: !include ../examples/_main/...
