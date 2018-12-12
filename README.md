@@ -107,7 +107,7 @@ This is an overview of the implementation progress.
 Group|Coverage|Progress|Comment
 ---|---|---|---
 Base|![usable](http://progressed.io/bar/80)|![usable](http://progressed.io/bar/80)|
-Exchange|![usable](http://progressed.io/bar/20)|![usable](http://progressed.io/bar/60)| We have made a conscious choice not to focus on the `Questionnaire` objects at this point.   
+Exchange|![usable](http://progressed.io/bar/30)|![usable](http://progressed.io/bar/60)| We have made a conscious choice not to focus on the `Questionnaire` objects at this point.   
 Concepts|![usable](http://progressed.io/bar/30)|![usable](http://progressed.io/bar/80)| We have made a conscious choice not to focus on the some of the objects related to codelists and classifications since they are covered in an existing system (KLASS) used by Statistic Norway. See additional notes at the bottom of this document.
 Structures|![usable](http://progressed.io/bar/60)|![usable](http://progressed.io/bar/70)| We have made a conscious choice not to focus on the `Reference Metatdata` objects at this point.   
 Business|![usable](http://progressed.io/bar/100)|![usable](http://progressed.io/bar/30)| All objects are covered, but there has been little time to go through the quality of attributes and usable examples.
@@ -144,10 +144,14 @@ Base|Role|![usable](http://progressed.io/bar/80)|
 Base|Organization|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agetn.agentType`
 Base|Individual|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agetn.agentType`
 Base|System|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agetn.agentType`
-Exchange|Exchange Channel|![usable](http://progressed.io/bar/70)|
+Exchange|Exchange Channel|![usable](http://progressed.io/bar/70)|Abstract Object
 Exchange|Protocol|![usable](http://progressed.io/bar/70)|
 Exchange|Provision Agreement|![usable](http://progressed.io/bar/70)|
 Exchange|Information Provider|![usable](http://progressed.io/bar/50)|
+Exchange|Data Harvester|![usable](http://progressed.io/bar/50)|Renamed from `Web Scraper Channel`
+Exchange|Questionnaire|![usable](http://progressed.io/bar/50)|
+Exchange|Adminstrative Register|![usable](http://progressed.io/bar/50)|
+Exchange|Product|![usable](http://progressed.io/bar/50)|
 Concepts|Variable|![usable](http://progressed.io/bar/80)|
 Concepts|Represented Variable|![usable](http://progressed.io/bar/90)|
 Concepts|Value Domain|![usable](http://progressed.io/bar/90)|Abstract Object
