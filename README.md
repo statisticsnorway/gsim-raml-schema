@@ -141,9 +141,9 @@ Base|Agent|![usable](http://progressed.io/bar/70)|
 Base|AgentDetails|![usable](http://progressed.io/bar/70)|Abstract Object
 Base|Agent In Role|![usable](http://progressed.io/bar/80)|
 Base|Role|![usable](http://progressed.io/bar/80)|
-Base|Organization|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agetn.agentType`
-Base|Individual|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agetn.agentType`
-Base|System|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agetn.agentType`
+Base|Organization|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agent.agentType`
+Base|Individual|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agent.agentType`
+Base|System|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agent.agentType`
 Exchange|Exchange Channel|![usable](http://progressed.io/bar/70)|
 Exchange|Protocol|![usable](http://progressed.io/bar/70)|
 Exchange|Provision Agreement|![usable](http://progressed.io/bar/70)|
