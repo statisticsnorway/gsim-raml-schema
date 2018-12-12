@@ -6,6 +6,7 @@ This project is documentation of the physical design using RAML.
 The intention is to have all GSIM objects and attributes represented as RAML-files.
 
 Image of the logical data model (LDM):
+
 <a href="ssb_gsim_ldm.png"><img src="ssb_gsim_ldm.png" height="360" width="300"></a>
 
 
