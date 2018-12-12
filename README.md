@@ -1,12 +1,16 @@
 # gsim-raml-schema
-RAML documentation of Statistic Norways information model based on [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model). 
+RAML documentation of Statistic Norways information model based on [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model).
+
+<a href="ssb_gsim_ldm.png"><img src="ssb_gsim_ldm.png" height="360" width="300"></a>
 
 The intention is to have all GSIM objects and attributes represented as RAML-files.
+
+
 
 ## RAML
 The raml-files in this project follows the RAML 1.0 spesification.
 
-We only use the `data types` section of RAML. There are no endpoints or methods. Those are automatically generated using Linked Data Store (https://github.com/statisticsnorway/linked-data-store-documentation).
+We only use the `data types` section of RAML. There are no endpoints or methods. Those are automatically generated using [Linked Data Store ](https://github.com/statisticsnorway/linked-data-store-documentation).
 
 
 ### Inheritance
