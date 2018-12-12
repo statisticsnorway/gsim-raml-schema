@@ -1,5 +1,5 @@
 # gsim-raml-schema
-RAML documentation of Statistic Norways information model based on [Generic Statisticl Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model). 
+RAML documentation of Statistic Norways information model based on [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model). 
 
 The intention is to have all GSIM objects and attributes represented as RAML-files.
 
