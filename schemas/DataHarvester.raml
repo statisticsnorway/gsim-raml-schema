@@ -11,3 +11,14 @@ types:
     type: [ IdentifiableArtefact.IdentifiableArtefact, ExchangeChannel.ExchangeChannel ]
 
     properties:
+      dataHarvesterType:
+        type: string
+        description: Method for harvesting data
+        displayName: Data harvester type
+        enum:
+          - API
+          - WEBSCRAPING
+          
+
+
+  example: !include ../examples/_main/DataHarvester_ShipRegisterNISNOR.json

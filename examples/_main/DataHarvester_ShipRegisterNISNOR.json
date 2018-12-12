@@ -19,5 +19,6 @@
   "createdDate": "2010-01-01T15:00:00.000Z",
   "createdBy": "OHV",
   "exchangeType": "COLLECT",
-  "protocol": "/Protocol/4eea64e6-5c87-462d-9fc5-c3fdd3a310fb"
+  "protocol": "/Protocol/4eea64e6-5c87-462d-9fc5-c3fdd3a310fb",
+  "dataHarvesterType": "API"
 }
