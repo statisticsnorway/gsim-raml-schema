@@ -1,12 +1,19 @@
 # gsim-raml-schema
-RAML documentation of Statistic Norways information model based on [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model). 
+Statistics Norway is modernizing its core systems for statistical production. Statistics Norway implements a logical data model based on the UN standard [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model).
+
+This project is documentation of the physical design using RAML.
 
 The intention is to have all GSIM objects and attributes represented as RAML-files.
+
+Image of the logical data model (LDM):
+
+<a href="ssb_gsim_ldm.png"><img src="ssb_gsim_ldm.png" height="360" width="300"></a>
+
 
 ## RAML
 The raml-files in this project follows the RAML 1.0 spesification.
 
-We only use the `data types` section of RAML. There are no endpoints or methods. Those are automatically generated using Linked Data Store (https://github.com/statisticsnorway/linked-data-store-documentation).
+We only use the `data types` section of RAML. There are no endpoints or methods. Those are automatically generated using [Linked Data Store ](https://github.com/statisticsnorway/linked-data-store-documentation).
 
 
 ### Inheritance
@@ -148,6 +155,10 @@ Exchange|Exchange Channel|![usable](http://progressed.io/bar/70)|
 Exchange|Protocol|![usable](http://progressed.io/bar/70)|
 Exchange|Provision Agreement|![usable](http://progressed.io/bar/70)|
 Exchange|Information Provider|![usable](http://progressed.io/bar/50)|
+Exchange|Data Harvester|![usable](http://progressed.io/bar/20)|Renamed from `Web Scraper Channel`
+Exchange|Questionnaire|![usable](http://progressed.io/bar/20)|
+Exchange|Adminstrative Register|![usable](http://progressed.io/bar/20)|
+Exchange|Product|![usable](http://progressed.io/bar/20)|
 Concepts|Variable|![usable](http://progressed.io/bar/80)|
 Concepts|Represented Variable|![usable](http://progressed.io/bar/90)|
 Concepts|Value Domain|![usable](http://progressed.io/bar/90)|Abstract Object
