@@ -155,6 +155,10 @@ Exchange|Exchange Channel|![usable](http://progressed.io/bar/70)|
 Exchange|Protocol|![usable](http://progressed.io/bar/70)|
 Exchange|Provision Agreement|![usable](http://progressed.io/bar/70)|
 Exchange|Information Provider|![usable](http://progressed.io/bar/50)|
+Exchange|Data Harvester|![usable](http://progressed.io/bar/20)|Renamed from `Web Scraper Channel`
+Exchange|Questionnaire|![usable](http://progressed.io/bar/20)|
+Exchange|Adminstrative Register|![usable](http://progressed.io/bar/20)|
+Exchange|Product|![usable](http://progressed.io/bar/20)|
 Concepts|Variable|![usable](http://progressed.io/bar/80)|
 Concepts|Represented Variable|![usable](http://progressed.io/bar/90)|
 Concepts|Value Domain|![usable](http://progressed.io/bar/90)|Abstract Object
