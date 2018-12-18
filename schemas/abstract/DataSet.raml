@@ -33,12 +33,24 @@ types:
       dataExistsFromDate?:
         type: datetime
         description: The date on which data is effective or valid.
+        displayName: Data exists from date
 
       dataExistsUntilDate?:
         type: datetime
         description: The date on which data is no longer effective or valid.
+        displayName: Data exists until date
 
       dataResources?:
         type: string[]
         displayName: Data resources
         (Link.types): [DataResource]
+
+      dataSourcePath?:
+        type: string
+        description: The path (API endpoint, URI, catalog, ..) to the raw dataset.
+        displayName: Data source path
+
+      metadataSourcePath?:
+        type: string
+        description: The path (API endpoint, URI, catalog, ..) to the metadata describing the raw dataset.
+        displayName: Metadata source path
