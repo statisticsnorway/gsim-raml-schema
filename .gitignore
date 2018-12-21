@@ -3,3 +3,4 @@
 /test/
 /jsonschemas/
 *.DS_Store
+/docker/
