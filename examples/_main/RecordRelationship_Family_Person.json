@@ -1,0 +1,30 @@
+{
+ "id": "1e9f3ace-f4c4-46b1-a29c-af632cfacac5",
+ "createdDate": "2018-12-21T12:13:32.735Z",
+ "createdBy": "Test",
+ "version": "1.0.0",
+ "versionValidFrom": "2018-12-21T12:13:32.735Z",
+ "lastUpdatedDate": "2018-12-21T12:13:32.735Z",
+ "lastUpdatedBy": "Test",
+ "validFrom": "2018-12-21T12:13:32.735Z",
+ "relationType": "SIBLING",
+ "sourceLogicalRecords": [
+  "/LogicalRecord/40c192fe-4da5-49a3-9369-0ea2db0387a7"
+ ],
+ "targetLogicalRecords": [
+  "/LogicalRecord/12ade3cd-e806-4b55-95ed-633a1979a6bf"
+ ],
+ "name": [
+   {
+     "languageCode": "en",
+     "languageText": "Family and  person income"
+   }
+ ],
+ "description": [
+   {
+     "languageCode": "en",
+     "languageText": "Family and  person income"
+   }
+ ],
+ "administrativeStatus": "OPEN"
+}

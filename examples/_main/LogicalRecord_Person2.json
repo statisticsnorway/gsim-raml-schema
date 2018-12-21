@@ -1,0 +1,33 @@
+{
+ "id": "12ade3cd-e806-4b55-95ed-633a1979a6bf",
+ "createdDate": "2018-12-21T12:00:54.380Z",
+ "createdBy": "Test",
+ "version": "1.0.0",
+ "versionValidFrom": "2018-12-21T12:00:54.380Z",
+ "lastUpdatedDate": "2018-12-21T12:00:54.380Z",
+ "lastUpdatedBy": "Test",
+ "validFrom": "2018-12-21T12:00:54.380Z",
+ "name": [
+   {
+     "languageCode": "en",
+     "languageText": "Person with income record 2"
+   }
+ ],
+ "description": [
+   {
+     "languageCode": "en",
+     "languageText": "Record for personinformation and income"
+   }
+ ],
+ "identifierComponents": [
+  "/IdentifierComponent/6b163989-deeb-4eb3-a749-442d4fbf2e56"
+ ],
+ "measureComponents": [
+  "/MeasureComponent/79ba3446-e603-4fe9-8844-dda5cad71388",
+  "/MeasureComponent/a6b4f6fb-9e79-4a1c-a85a-12064395c4f4",
+  "/MeasureComponent/eea0cc51-c615-4b2b-8288-4fbb2e2fd71d",
+  "/MeasureComponent/52d48b37-5468-4eba-a872-451abb64133e"
+ ],
+ "unitType": "/UnitType/51a8dcde-127d-49de-84a4-a0a9c34f666f",
+ "administrativeStatus": "OPEN"
+}
