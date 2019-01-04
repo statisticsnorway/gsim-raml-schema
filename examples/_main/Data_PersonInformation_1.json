@@ -1,0 +1,32 @@
+{
+  "dataSet": "/UnitDataSet/b9c10b86-5867-4270-b56e-ee7439fe381e",
+  "data": [
+    {
+      "id": "3a35775d-8654-48aa-81c1-e0b060b1a9b9",
+      "PERSON_ID": "010170nnnnn",
+      "MUNICIPALITY": "0301",
+      "MARITAL_STATUS": "1",
+      "INCOME": "400000",
+      "GENDER": "1",
+      "DATA_QUALITY": "GOOD"
+    },
+    {
+      "id": "138ad925-4b5d-45d2-9791-9791779f9fe7",
+      "PERSON_ID": "020280nnnnn",
+      "MUNICIPALITY": "0101",
+      "MARITAL_STATUS": "2",
+      "INCOME": "500000",
+      "GENDER": "2",
+      "DATA_QUALITY": "GOOD"
+    },
+    {
+      "id": "fcf7c20e-1298-4b98-8b62-052b37f6055a",
+      "PERSON_ID": "030390nnnnn",
+      "MUNICIPALITY": "0105",
+      "MARITAL_STATUS": "2",
+      "INCOME": "600000",
+      "GENDER": "2",
+      "DATA_QUALITY": "GOOD"
+    }
+  ]
+}
