@@ -1,0 +1,27 @@
+#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+
+types:
+  Data:
+    description: A physical dataset (data file) with unit data or dimentional data. Implements the GSIM objects UnitDataRecord, DataPoint (UnitDataPoint/DimentionalDataPoint) and Datum.
+    displayName: Data
+    type: object
+
+    properties:
+
+      dataSet:
+        type: string
+        displayName: Dataset
+        (Link.types): [UnitDataSet, DimensionalDataSet]
+
+      data:
+        type: object
+        description: The data.
+        displayName: Data
+        properties:
+          # No properties specified because each data set has its own specific structure
+        # TODO: Eventuelt om vi definerer flere typer data-objekter/struktuer og linker til disse?
+
+
+  example: !include ../examples/_main/Data_PersonInformation_1.json
