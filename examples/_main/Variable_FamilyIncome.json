@@ -1,0 +1,27 @@
+{
+ "lastUpdatedBy": "Test",
+ "administrativeStatus": "OPEN",
+ "description": [
+   {
+     "languageCode": "en",
+     "languageText": "The total income of all persons in the family"
+   }
+ ],
+ "validFrom": "2019-01-03T08:42:50.211Z",
+ "version": "1.0.1",
+ "versionValidFrom": "2019-01-03T08:43:11.448Z",
+ "unitType": "/UnitType/31fd20ea-e1ca-46ba-bbf1-9d81e827575e",
+ "lastUpdatedDate": "2019-01-03T08:43:11.448Z",
+ "createdDate": "2019-01-03T08:42:50.211Z",
+ "createdBy": "Test",
+ "subjectFields": [
+  "/SubjectField/85109ca9-3539-40e9-a8fc-2aeb1d1277c4"
+ ],
+ "name": [
+   {
+     "languageCode": "en",
+     "languageText": "FamilyIncome"
+   }
+ ],
+ "id": "103b71e7-45b2-4e6c-ba38-f36254b46573"
+}
