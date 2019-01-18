@@ -2,13 +2,13 @@
   "id": "4eea64e6-5c87-462d-9fc5-c3fdd3a310fc",
   "name": [
     {
-      "languageCode": "nb",
+      "languageCode": "en",
       "languageText": "NIS/NOR"
     }
   ],
   "description": [
     {
-      "languageCode": "nb",
+      "languageCode": "en",
       "languageText": "Norwegian Ordinary Ship Register (NOR)- Norwegian Maritime Authority"
     }
   ],
@@ -18,7 +18,7 @@
   "validFrom": "2010-01-01T15:00:00.000Z",
   "createdDate": "2010-01-01T15:00:00.000Z",
   "createdBy": "OHV",
-  "exchangeType": "COLLECT",
+  "direction": "COLLECT",
   "protocol": "/Protocol/4eea64e6-5c87-462d-9fc5-c3fdd3a310fb",
   "dataHarvesterType": "API"
 }
