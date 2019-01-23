@@ -11,3 +11,10 @@ types:
     type: [ IdentifiableArtefact.IdentifiableArtefact, ExchangeChannel.ExchangeChannel ]
 
     properties:
+      presentations:
+        type: string[]
+        displayName: Presentations
+        (Link.types): [Presentation]
+
+
+  # example: !include ../examples/_main/Product_xxx.json
