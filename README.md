@@ -114,7 +114,7 @@ This is an overview of the implementation progress.
 Group|Coverage|Progress|Comment
 ---|---|---|---
 Base|![usable](http://progressed.io/bar/80)|![usable](http://progressed.io/bar/80)|
-Exchange|![usable](http://progressed.io/bar/30)|![usable](http://progressed.io/bar/60)| We have made a conscious choice not to focus on the `Questionnaire` objects at this point.   
+Exchange|![usable](http://progressed.io/bar/40)|![usable](http://progressed.io/bar/60)| We have made a conscious choice not to focus on the `Questionnaire` objects at this point.   
 Concepts|![usable](http://progressed.io/bar/30)|![usable](http://progressed.io/bar/80)| We have made a conscious choice not to focus on the some of the objects related to codelists and classifications since they are covered in an existing system (KLASS) used by Statistic Norway. See additional notes at the bottom of this document.
 Structures|![usable](http://progressed.io/bar/60)|![usable](http://progressed.io/bar/70)| We have made a conscious choice not to focus on the `Reference Metatdata` objects at this point.   
 Business|![usable](http://progressed.io/bar/100)|![usable](http://progressed.io/bar/30)| All objects are covered, but there has been little time to go through the quality of attributes and usable examples.
@@ -159,6 +159,8 @@ Exchange|Data Harvester|![usable](http://progressed.io/bar/20)|Renamed from `Web
 Exchange|Questionnaire|![usable](http://progressed.io/bar/20)|
 Exchange|Adminstrative Register|![usable](http://progressed.io/bar/20)|
 Exchange|Product|![usable](http://progressed.io/bar/20)|
+Exchange|OutputSpecification|![usable](http://progressed.io/bar/20)|
+Exchange|Presentation|![usable](http://progressed.io/bar/20)|
 Concepts|Variable|![usable](http://progressed.io/bar/80)|
 Concepts|Represented Variable|![usable](http://progressed.io/bar/90)|
 Concepts|Value Domain|![usable](http://progressed.io/bar/90)|Abstract Object
