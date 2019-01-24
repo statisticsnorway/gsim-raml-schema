@@ -5,13 +5,13 @@ uses:
   ExchangeChannel: ./abstract/ExchangeChannel.raml
 
 types:
-  DataHarvester:
+  DataHarvesting:
     description: A concrete and usable tool to gather information from the Internet.
-    displayName: DataHarvester
+    displayName: DataHarvesting
     type: [ IdentifiableArtefact.IdentifiableArtefact, ExchangeChannel.ExchangeChannel ]
 
     properties:
-      dataHarvesterType:
+      dataHarvestingType:
         type: string
         description: Method for harvesting data
         displayName: Data harvester type
@@ -21,4 +21,4 @@ types:
 
 
 
-    example: !include ../examples/_main/DataHarvester_ShipRegisterNISNOR.json
+    example: !include ../examples/_main/DataHarvesting_ShipRegisterNISNOR.json

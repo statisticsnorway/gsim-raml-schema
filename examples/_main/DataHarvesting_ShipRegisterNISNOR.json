@@ -20,5 +20,5 @@
   "createdBy": "OHV",
   "direction": "COLLECT",
   "protocol": "/Protocol/4eea64e6-5c87-462d-9fc5-c3fdd3a310fb",
-  "dataHarvesterType": "API"
+  "dataHarvestingType": "API"
 }

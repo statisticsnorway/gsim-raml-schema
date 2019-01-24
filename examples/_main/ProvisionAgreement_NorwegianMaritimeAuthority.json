@@ -38,6 +38,6 @@
         "languageText":"NIS/NOR/BYGG-register"
       }
     ],
-    "exchangeChannels":["/DataHarvester/4eea64e6-5c87-462d-9fc5-c3fdd3a310fc"],
+    "exchangeChannels":["/DataHarvesting/4eea64e6-5c87-462d-9fc5-c3fdd3a310fc"],
     "frequency":"ONGOING"
   }
