@@ -20,3 +20,13 @@ types:
         type: string
         displayName: Protocol
         (Link.types): [Protocol]
+
+      consumesDataSets?:
+        type: string[]
+        displayName: Consumes Data Sets
+        (Link.types): [UnitDataSet, DimensionalDataSet]
+
+      producesDataSets?:
+        type: string[]
+        displayName: Consumes Data Sets
+        (Link.types): [UnitDataSet, DimensionalDataSet]
