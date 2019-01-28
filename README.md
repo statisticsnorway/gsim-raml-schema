@@ -145,7 +145,7 @@ Base|Identifiable Artefact|![usable](http://progressed.io/bar/80)|Abstract Objec
 Base|Administrative Details|![usable](http://progressed.io/bar/80)|Object Type
 Base|Multilingual Text|![usable](http://progressed.io/bar/90)|Object Type
 Base|Agent|![usable](http://progressed.io/bar/70)|
-Base|AgentDetails|![usable](http://progressed.io/bar/70)|Abstract Object
+Base|AgentDetails|![usable](http://progressed.io/bar/70)|Object Type
 Base|Agent In Role|![usable](http://progressed.io/bar/80)|
 Base|Role|![usable](http://progressed.io/bar/80)|
 Base|Organization|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `Agent.agentType`
@@ -154,7 +154,7 @@ Base|System|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `A
 Exchange|Exchange Channel|![usable](http://progressed.io/bar/70)|Abstract Object
 Exchange|Protocol|![usable](http://progressed.io/bar/70)|
 Exchange|Provision Agreement|![usable](http://progressed.io/bar/70)|
-Exchange|Information Provider|![usable](http://progressed.io/bar/50)|
+Exchange|Information Provider|![usable](http://progressed.io/bar/50)|Deviates from the model in that inheritance from `Role` is not direct, but is taken care of via `IdentifiableArtifact.agentInRoles`
 Exchange|Data Harvesting|![usable](http://progressed.io/bar/20)|Renamed from `Web Scraper Channel`
 Exchange|Questionnaire|![usable](http://progressed.io/bar/20)|
 Exchange|Adminstrative Register|![usable](http://progressed.io/bar/20)|
