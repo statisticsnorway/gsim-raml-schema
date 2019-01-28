@@ -154,6 +154,7 @@ Base|System|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `A
 Exchange|Exchange Channel|![usable](http://progressed.io/bar/70)|Abstract Object
 Exchange|Protocol|![usable](http://progressed.io/bar/70)|
 Exchange|Provision Agreement|![usable](http://progressed.io/bar/70)|
+Exchange|Information Consumer|![usable](http://progressed.io/bar/70)|Deviates from the model in that inheritance from `Role` is not direct, but is taken care of via `IdentifiableArtifact.agentInRoles`
 Exchange|Information Provider|![usable](http://progressed.io/bar/70)|Deviates from the model in that inheritance from `Role` is not direct, but is taken care of via `IdentifiableArtifact.agentInRoles`
 Exchange|Data Harvesting|![usable](http://progressed.io/bar/70)|Renamed from `Web Scraper Channel`
 Exchange|Questionnaire|![usable](http://progressed.io/bar/70)|
