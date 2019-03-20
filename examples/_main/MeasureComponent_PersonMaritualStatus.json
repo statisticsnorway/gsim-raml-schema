@@ -18,5 +18,6 @@
   "validFrom": "2018-01-01T00:00:00.000Z",
   "createdDate": "2018-01-01T00:00:00.000Z",
   "createdBy": "BNJ",
+  "representedVariable": "/RepresentedVariable/e46ede82-cc41-441c-bd77-f1925afbd342",
   "shortName": "MARITAL_STATUS"
 }
