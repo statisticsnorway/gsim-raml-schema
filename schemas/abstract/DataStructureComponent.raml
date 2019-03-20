@@ -27,13 +27,7 @@ types:
           - POLYGON
           - LINE
 
-      # COMMENT:
-      # Due to a practical need to link the InstanceVariable object more directly to the
-      # StructurComponent object (IdentifierComponent, MeasureComponent or AttributeComponent),
-      # the link from the DataStructureComponent to the RepresentedVariable is moved to
-      # the InstanceVariable object in the (this) physical model. This is an alternative linking
-      # that should be compatible with the link in the logical data model (LDS).
-      # representedVariable:
-      #   type: string
-      #   displayName: Represented variable
-      #   (Link.types): [RepresentedVariable]
+      representedVariable:
+        type: string
+        displayName: Represented variable
+        (Link.types): [RepresentedVariable]

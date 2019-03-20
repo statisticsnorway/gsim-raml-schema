@@ -23,9 +23,9 @@ types:
       # COMMENT:
       # Due to a practical need to link the InstanceVariable object more directly to the
       # StructurComponent object (IdentifierComponent, MeasureComponent or AttributeComponent),
-      # the link from the DataStructureComponent to the RepresentedVariable is moved to
-      # the InstanceVariable object in the (this) physical model. This is an alternative linking
-      # that should be compatible with the link in the logical data model (LDS).
+      # the (this) link between InstanceVariable and DataStructureComponent is created in addition
+      # to the existing link between the DataStructureComponent and the RepresentedVariable
+      # in the (this) physical model.
       dataStructureComponent:
           type: string
           displayName: Data Structure Component
