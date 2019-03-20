@@ -21,5 +21,6 @@
   "isUnique": true,
   "isComposite": false,
   "role": "ENTITY",
+  "representedVariable": "/RepresentedVariable/950b417a-0b3c-4909-aa4b-5689a1378b8e",
   "shortName": "FAMILY_ID"
 }
