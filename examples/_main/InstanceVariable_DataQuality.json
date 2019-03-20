@@ -20,5 +20,6 @@
     "createdBy": "OHV",
     "representedVariable": "/RepresentedVariable/51d14a9d-cf08-4d12-a680-0e97a7288ef6",
     "population": "/Population/7ef40579-469d-447f-8955-febb7b254b10",
+    "dataStructureComponent": "/AttributeComponent/0fadb1f5-cf8f-44d2-aec9-034b6836237c",
     "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c"
 }

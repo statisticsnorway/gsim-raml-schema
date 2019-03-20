@@ -28,5 +28,6 @@
   "attributeComponents": [
     "/AttributeComponent/0fadb1f5-cf8f-44d2-aec9-034b6836237c"
   ],
-  "unitType": "/UnitType/31fd20ea-e1ca-46ba-bbf1-9d81e827575e"
+  "unitType": "/UnitType/31fd20ea-e1ca-46ba-bbf1-9d81e827575e",
+  "shortName": "FAMILY"
 }

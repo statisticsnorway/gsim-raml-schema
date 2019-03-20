@@ -11,11 +11,6 @@ types:
     type: IdentifiableArtefact.IdentifiableArtefact
 
     properties:
-      informationProviders?:
-        type: string[]
-        displayName: Information providers
-        (Link.types): [InformationProvider]
-
       regulation:
         type: string
         description: Legal or lawful basis to collect data
@@ -46,7 +41,6 @@ types:
           - D
           - E
 
-
       changeManagement?:
         type: MultilingualText.MultilingualText[]
         displayName: Change management
@@ -56,11 +50,6 @@ types:
         type: MultilingualText.MultilingualText[]
         displayName: Information source
         description: External source
-
-      exchangeChannels?:
-        type: string[]
-        displayName: Exchange channels
-        (Link.types): [ExchangeChannel]
 
       frequency:
         type: string
@@ -72,6 +61,26 @@ types:
           - WEEKLY
           - MONTHLY
           - ANNUAL
+
+      exchangeChannels?:
+        type: string[]
+        displayName: Exchange channels
+        (Link.types): [Product, AdministrativeRegister, Questionnaire, DataHarvesting]
+
+      informationProviders?:
+        type: string[]
+        displayName: Information providers
+        (Link.types): [AgentInRole]
+
+      informationConsumers?:
+        type: string[]
+        displayName: Information consumers
+        (Link.types): [AgentInRole]
+
+      agreedDataStructures?:
+        type: string[]
+        displayName: Agreed Data Structures
+        (Link.types): [UnitDataStructure, DimensionalDataStructure]
 
 
     example: !include ../examples/_main/ProvisionAgreement_NorwegianMaritimeAuthority.json

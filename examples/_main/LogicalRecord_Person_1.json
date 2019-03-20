@@ -30,5 +30,6 @@
   "attributeComponents": [
     "/AttributeComponent/0fadb1f5-cf8f-44d2-aec9-034b6836237c"
   ],
-  "unitType": "/UnitType/51a8dcde-127d-49de-84a4-a0a9c34f666f"
+  "unitType": "/UnitType/51a8dcde-127d-49de-84a4-a0a9c34f666f",
+  "shortName": "PERSON"
 }

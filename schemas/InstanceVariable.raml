@@ -20,6 +20,17 @@ types:
         displayName: Population
         (Link.types): [Population]
 
+      # COMMENT:
+      # Due to a practical need to link the InstanceVariable object more directly to the
+      # StructurComponent object (IdentifierComponent, MeasureComponent or AttributeComponent),
+      # the link from the DataStructureComponent to the RepresentedVariable is moved to
+      # the InstanceVariable object in the (this) physical model. This is an alternative linking
+      # that should be compatible with the link in the logical data model (LDM).
+      dataStructureComponent:
+          type: string
+          displayName: Data Structure Component
+          (Link.types): [IdentifierComponent, MeasureComponent, AttributeComponent]
+
       sentinelValueDomain?:
         type: string
         displayName: Sentinel value domain
