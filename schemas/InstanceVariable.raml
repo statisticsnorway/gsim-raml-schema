@@ -21,19 +21,75 @@ types:
         (Link.types): [Population]
 
       # COMMENT:
-      # Due to a practical need to link the InstanceVariable object more directly to the
-      # StructurComponent object (IdentifierComponent, MeasureComponent or AttributeComponent),
-      # the (this) link between InstanceVariable and DataStructureComponent is created in addition
-      # to the existing link between the DataStructureComponent and the RepresentedVariable
-      # in the (this) physical model.
-      dataStructureComponent:
+      # This enumeraton is a simplification of the GSIM logical Data Model (LDM) and replaces the IdentifierComponent,
+      # MeasureComponent and AttributeComponent objects in LDM.
+      dataStructureComponentType:
           type: string
-          displayName: Data Structure Component
-          (Link.types): [IdentifierComponent, MeasureComponent, AttributeComponent]
+          description: The data structure component type (identifier, measure or attribute) of the instance variable.
+          displayName: Data Structure Component Type
+          enum:
+            - IDENTIFIER_COMPONENT
+            - MEASURE_COMPONENT
+            - ATTRIBUTE_COMPONENT
+
+      shortName:
+        type: string
+        description: A short technical name in CAPITAL LETTERS. Use underscore as word separator (no other special characters allowed).
+        displayName: Short name
 
       sentinelValueDomain?:
         type: string
-        displayName: Sentinel value domain
+        displayName: Sentinel value domain (described or enumerated)
         (Link.types): [EnumeratedValueDomain, DescribedValueDomain]
+
+      format?:
+        type: string
+        description: This attribute describes the data-format of the instance variable. For example a date-format-mask.
+        displayName: Format
+
+      identifierComponentIsUnique?:
+        type: boolean
+        description: For INDENTIFIER_COMPONENTs. Indicates if the key is unique.
+        displayName: Identifier component is unique
+
+      identifierComponentIsComposite?:
+        type: boolean
+        description: For INDENTIFIER_COMPONENTs. Indicates if the key is composite, e.g. person-identifier and date/time.
+        displayName: Identifier component is composite
+
+      dataStructureComponentRole?:
+        type: string
+        description: For INDENTIFIER_COMPONENTs or MEASURE_COMPONENTs. Specifies the type of role (entity, identity, count, time, geography)
+        displayName: Data structure component role
+        enum:
+          - ENTITY
+          - IDENTITY
+          - COUNT
+          - TIME
+          - GEO
+
+      geoType?:
+        type: string
+        description: If the component is a geolocation (dataStructureComponentRole is GEO) then there are different types
+        displayName: Geo type
+        enum:
+          - POINT
+          - POLYGON
+          - LINE
+
+      attributeComponentAssignmentStatus?:
+        type: string
+        description: For ATTRIBUTE_COMPONENTs. When there is an attribute in a DimensionalDataStructure, this sets a status to indicate whether it is mandatory or optional to include it in that particular DimensionalDataSet
+        displayName: Attribute component assignment status
+
+      attributeComponentAttachmentLevel?:
+        type: string
+        description: For ATTRIBUTE_COMPONENTs. For a certain attachment, this describes at what level the attachment is at (DataSet, Observation, Series, Group)
+        displayName: Attribute component attachment level
+        enum:
+          - OBSERVATION
+          - DATASET
+          - SERIES
+
 
     example: !include ../examples/_main/InstanceVariable_FamilyType.json
