@@ -177,7 +177,7 @@ Concepts|MeasurementType|![usable](http://progressed.io/bar/80)|
 Concepts|MeasurementUnit|![usable](http://progressed.io/bar/80)|
 Concepts|Concept|![usable](http://progressed.io/bar/50)|Abstract Object
 Structures|Component Relationship|![usable](http://progressed.io/bar/80)|
-Structures|Data Structure Component|![usable](http://progressed.io/bar/100)| Removed (properties included in InstanceVariable)
+Structures|Data Structure Component|![usable](http://progressed.io/bar/100)| Not implemented (properties included in InstanceVariable)
 Structures|Identifier Component|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `InstanceVariable.dataStructureComponentType`
 Structures|Measure Component|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `InstanceVariable.dataStructureComponentType`
 Structures|Attribute Component|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `InstanceVariable.dataStructureComponentType`
