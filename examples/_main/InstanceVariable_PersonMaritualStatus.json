@@ -20,6 +20,7 @@
     "createdBy": "BNJ",
     "representedVariable": "/RepresentedVariable/e46ede82-cc41-441c-bd77-f1925afbd342",
     "population": "/Population/dfb6eecf-c4f4-4fa6-82a1-8b8684d560f4c",
-    "dataStructureComponent": "/MeasureComponent/a6b4f6fb-9e79-4a1c-a85a-12064395c4f4",
-    "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c"
+    "dataStructureComponentType": "MEASURE",
+    "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c",
+    "shortName": "MARITAL_STATUS"
 }

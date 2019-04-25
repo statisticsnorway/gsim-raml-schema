@@ -20,6 +20,7 @@
     "createdBy": "BNJ",
     "representedVariable": "/RepresentedVariable/217a2c16-0a87-486c-b0c0-1580d9ad830a",
     "population": "/Population/dfb6eecf-c4f4-4fa6-82a1-8b8684d560f4c",
-    "dataStructureComponent": "/MeasureComponent/52d48b37-5468-4eba-a872-451abb64133e",
-    "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c"
+    "dataStructureComponentType": "MEASURE",
+    "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c",
+    "shortName": "INCOME"
 }
