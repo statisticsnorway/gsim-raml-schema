@@ -27,20 +27,12 @@ types:
           pagination: NONE
           isReverseLink: false
 
-      # COMMENT:
-      # Due to a practical need to link the InstanceVariable object more directly to the
-      # StructurComponent object (IdentifierComponent, MeasureComponent or AttributeComponent),
-      # the (this) link between InstanceVariable and DataStructureComponent is created in addition
-      # to the existing link between the DataStructureComponent and the RepresentedVariable
-      # in the (this) physical model.
-      dataStructureComponent:
-          type: string
-          displayName: Data Structure Component
-          (Link.types): [IdentifierComponent, MeasureComponent, AttributeComponent]
-
       sentinelValueDomain?:
         type: string
         displayName: Sentinel value domain
-        (Link.types): [EnumeratedValueDomain, DescribedValueDomain]
+        (Link.relationLink):
+          linksTo: [EnumeratedValueDomain, DescribedValueDomain]
+          pagination: NONE
+          isReverseLink: false
 
-    example: !include ../examples/_main/InstanceVariable_FamilyType.json
+  #  example: !include ../examples/_main/InstanceVariable_FamilyType.json
