@@ -18,7 +18,6 @@
     "validFrom": "1985-01-01T15:00:00.000Z",
     "createdDate": "1985-01-01T15:00:00.000Z",
     "createdBy": "OHV",
-    "attributeComponentAttachmentLevel": "OBSERVATION",
     "representedVariable": "/RepresentedVariable/51d14a9d-cf08-4d12-a680-0e97a7288ef6",
     "population": "/Population/7ef40579-469d-447f-8955-febb7b254b10",
     "dataStructureComponentType": "ATTRIBUTE",
