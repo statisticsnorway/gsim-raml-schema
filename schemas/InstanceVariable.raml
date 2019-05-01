@@ -21,7 +21,7 @@ types:
         (Link.types): [Population]
 
       # COMMENT:
-      # This enumeraton is a simplification of the GSIM logical Data Model (LDM) and replaces the IdentifierComponent,
+      # This enumeraton is a simplification of the GSIM Logical Data Model (LDM) and replaces the IdentifierComponent,
       # MeasureComponent and AttributeComponent objects in LDM.
       dataStructureComponentType:
           type: string
@@ -59,7 +59,7 @@ types:
 
       dataStructureComponentRole?:
         type: string
-        description: For INDENTIFIER-components or MEASURE-components. Specifies the type of role (entity, identity, count, time, geography)
+        description: For INDENTIFIER-components or MEASURE-components. Specifies the type of role: "entity", "count", "time", "geography" or "identity" (only INDENTIFIER-components).
         displayName: Data structure component role
         enum:
           - ENTITY
@@ -76,20 +76,6 @@ types:
           - POINT
           - POLYGON
           - LINE
-
-      attributeComponentAssignmentStatus?:
-        type: string
-        description: For ATTRIBUTE-components. When there is an attribute in a DimensionalDataStructure, this sets a status to indicate whether it is mandatory or optional to include it in that particular DimensionalDataSet
-        displayName: Attribute component assignment status
-
-      attributeComponentAttachmentLevel?:
-        type: string
-        description: For ATTRIBUTE-components. For a certain attachment, this describes at what level the attachment is at (DataSet, Observation, Series, Group)
-        displayName: Attribute component attachment level
-        enum:
-          - OBSERVATION
-          - DATASET
-          - SERIES
 
 
     example: !include ../examples/_main/InstanceVariable_FamilyType.json
