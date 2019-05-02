@@ -21,7 +21,7 @@
     "relationType": "SIBLING",
     "sourceComponents": [
       "/InstanceVariable/71aec966-eb44-4a49-9bbf-0606563ca0cb",
-      "/InstanceVariable/beb729fc-f418-46b1-bab1-8ed20d82b907",
+      "/InstanceVariable/beb729fc-f418-46b1-bab1-8ed20d82b907"
     ],
     "targetComponents": [
       "/InstanceVariable/8d51f269-4216-4351-94e5-94602e704694"
