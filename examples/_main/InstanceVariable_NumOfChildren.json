@@ -20,6 +20,7 @@
     "createdBy": "OHV",
     "representedVariable": "/RepresentedVariable/d0dbb7eb-e0ca-44d3-909f-1dd7a9cb3249",
     "population": "/Population/7ef40579-469d-447f-8955-febb7b254b10",
-    "dataStructureComponent": "/MeasureComponent/aafadf00-2943-4765-9779-a429126b3b01",
-    "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c"
+    "dataStructureComponentType": "MEASURE",
+    "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c",
+    "shortName": "NUM_CHILDREN"
 }

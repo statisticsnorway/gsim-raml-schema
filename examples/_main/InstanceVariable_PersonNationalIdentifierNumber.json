@@ -18,8 +18,12 @@
     "validFrom": "1985-01-01T15:00:00.000Z",
     "createdDate": "1985-01-01T15:00:00.000Z",
     "createdBy": "BNJ",
+    "identifierComponentIsUnique": true,
+    "identifierComponentIsComposite": false,
+    "dataStructureComponentRole": "ENTITY",
     "representedVariable": "/RepresentedVariable/6cdecd72-c4a8-4b56-9c0a-9fd01c4fea56",
     "population": "/Population/dfb6eecf-c4f4-4fa6-82a1-8b8684d560f4c",
-    "dataStructureComponent": "/IdentifierComponent/6b163989-deeb-4eb3-a749-442d4fbf2e56",
-    "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c"
+    "dataStructureComponentType": "IDENTIFIER",
+    "sentinelValueDomain": "/EnumeratedValueDomain/c1a40b5c-f8d4-4ed8-b137-60afc71afa0c",
+    "shortName": "PERSON_ID"
 }
