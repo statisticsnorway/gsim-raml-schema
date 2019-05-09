@@ -11,14 +11,14 @@ annotationTypes:
       linksTo:
         type: string[]
         description: Holds the type of objects a link points to
-      pagination?:
+      withPagination:
         enum: [ SOURCE, TARGET, BOTH, NONE ]
         default: BOTH
         description: Pagination settings for the link.
-      isReverseLink?:
+      withReverseLink:
         type: boolean
         default: false
-        description: If the link should be also work the opposite way
+        description: If the link also should work the opposite way
       reverseLinkName?:
         type: string
         description: Name of the property for the reverse link (from target to source). Should be a plural.
