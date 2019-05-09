@@ -15,8 +15,8 @@ types:
         displayName: Represented variable
         (Link.relationLink):
           linksTo: [RepresentedVariable]
-          pagination: SOURCE
-          isReverseLink: true
+          withPagination: SOURCE
+          withReverseLink: true
           reverseLinkName: representedVariable_has_instanceVariables
 
       population:
@@ -24,8 +24,8 @@ types:
         displayName: Population
         (Link.relationLink):
           linksTo: [Population]
-          pagination: NONE
-          isReverseLink: false
+          withPagination: NONE
+          withReverseLink: false
 
        # COMMENT:
        # This enumeraton is a simplification of the GSIM Logical Data Model (LDM) and replaces the IdentifierComponent,
