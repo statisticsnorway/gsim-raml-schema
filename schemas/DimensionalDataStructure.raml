@@ -11,17 +11,10 @@ types:
     type: [ IdentifiableArtefact.IdentifiableArtefact, DataStructure.DataStructure ]
 
     properties:
-      identifierComponents:
+      # COMMENT:
+      # This link to InstanceVariable is a simplification of the GSIM logical Data Model (LDM) and replaces
+      # the links to IdentifierComponent, MeasureComponent and AttributeComponent objects in LDM.
+      instanceVariables:
         type: string[]
-        displayName: Identifier components
-        (Link.types): [IdentifierComponent]
-
-      measureComponents:
-        type: string[]
-        displayName: Measure components
-        (Link.types): [MeasureComponent]
-
-      attributeComponents?:
-        type: string[]
-        displayName: Attribute components
-        (Link.types): [AttributeComponent]
+        displayName: Instance variables
+        (Link.types): [InstanceVariable]

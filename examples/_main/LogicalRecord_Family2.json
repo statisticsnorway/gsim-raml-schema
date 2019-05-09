@@ -19,15 +19,11 @@
      "languageText": "Record of families with classification and number of children."
    }
  ],
- "identifierComponents": [
-  "/IdentifierComponent/10c1d586-3a93-4acc-8755-16678b32f4c8"
- ],
- "measureComponents": [
-  "/MeasureComponent/3e169743-c587-47e1-a4ce-87dd0fa9d134",
-  "/MeasureComponent/aafadf00-2943-4765-9779-a429126b3b01"
- ],
- "attributeComponents": [
-  "/AttributeComponent/0fadb1f5-cf8f-44d2-aec9-034b6836237c"
+ "instanceVariables": [
+   "/InstanceVariable/e2288748-7d26-4690-b07b-30a58c4a41f4",
+   "/InstanceVariable/98bf9718-3964-4eb7-a966-3be58d3b9e55",
+   "/InstanceVariable/9ce825c9-ff8e-4e64-89a9-8d066c9349e7",
+   "/InstanceVariable/8d51f269-4216-4351-94e5-94602e704694"
  ],
  "unitType": "/UnitType/31fd20ea-e1ca-46ba-bbf1-9d81e827575e",
  "administrativeStatus": "OPEN",

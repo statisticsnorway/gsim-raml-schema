@@ -27,6 +27,23 @@ types:
           pagination: NONE
           isReverseLink: false
 
+       # COMMENT:
+       # This enumeraton is a simplification of the GSIM Logical Data Model (LDM) and replaces the IdentifierComponent,
+       # MeasureComponent and AttributeComponent objects in LDM.
+      dataStructureComponentType:
+        type: string
+        description: The data structure component type (identifier, measure or attribute) of the instance variable.
+        displayName: Data Structure Component Type
+        enum:
+         - IDENTIFIER
+         - MEASURE
+         - ATTRIBUTE
+
+      shortName:
+        type: string
+        description: A short technical name in CAPITAL LETTERS. Use underscore as word separator (no other special characters allowed).
+        displayName: Short name
+
       sentinelValueDomain?:
         type: string
         displayName: Sentinel value domain
@@ -35,4 +52,40 @@ types:
           pagination: NONE
           isReverseLink: false
 
-  #  example: !include ../examples/_main/InstanceVariable_FamilyType.json
+      format?:
+        type: string
+        description: This attribute describes the data-format of the instance variable. For example a date-format-mask.
+        displayName: Format
+
+      identifierComponentIsUnique?:
+        type: boolean
+        description: For INDENTIFIER-components. Indicates if the key is unique.
+        displayName: Identifier component is unique
+
+      identifierComponentIsComposite?:
+        type: boolean
+        description: For INDENTIFIER-components. Indicates if the key is composite, e.g. person-identifier and date/time.
+        displayName: Identifier component is composite
+
+      dataStructureComponentRole?:
+        type: string
+        description: For INDENTIFIER-components or MEASURE-components. Specifies the type of role --> "entity", "count", "time", "geography" or "identity" (only INDENTIFIER-components).
+        displayName: Data structure component role
+        enum:
+          - ENTITY
+          - IDENTITY
+          - COUNT
+          - TIME
+          - GEO
+
+      geoType?:
+        type: string
+        description: If the component is a geolocation (dataStructureComponentRole is GEO) then there are different types
+        displayName: Geo type
+        enum:
+          - POINT
+          - POLYGON
+          - LINE
+
+
+    example: !include ../examples/_main/InstanceVariable_FamilyType.json
