@@ -1,0 +1,31 @@
+#%RAML 1.0 Library
+uses:
+  PropertyTranslation: ./abstract/PropertyTranslation.raml
+  MultilingualText: ./abstract/MultilingualText.raml
+
+types:
+
+  Translation:
+    description: A tool for assigning multilingual name and description to a domain and its properties
+    displayName: Translation
+
+    properties:
+      id:
+        type: string
+        description: The name of the domain in which this particular instance of this object assigns translations for
+        displayName: Id
+
+      propertyTranslations?:
+        type: PropertyTranslation.PropertyTranslation[]
+        description: All the language translations for the properties related to this domain
+        displayName: Attribute translations
+
+      domainNameTranslation?:
+        type: MultilingualText.MultilingualText[]
+        description: Language translation for the domain name
+        displayName: Domain name translation
+        
+      domainDescriptionTranslation?:
+        type: MultilingualText.MultilingualText[]
+        description: Language translation for the domain description
+        displayName: Domain description translation

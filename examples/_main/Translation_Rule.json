@@ -1,0 +1,47 @@
+{
+  "id": "Rule",
+  "domainNameTranslation": [
+    {
+      "languageCode": "nb",
+      "languageText": "Regel"
+    }
+  ],
+  "domainDescriptionTranslation": [
+    {
+      "languageCode": "nb",
+      "languageText": "Beskrivelse av regel domene"
+    }
+  ],
+  "propertyTranslations": [
+    {
+      "propertyName": "algorithm",
+      "nameTranslations": [
+        {
+          "languageCode": "nb",
+          "languageText": "Algoritme"
+        }
+      ],
+      "descriptionTranslations": [
+        {
+          "languageCode": "nb",
+          "languageText": "Regelen uttrykt som en algoritme"
+        }
+      ]
+    },
+    {
+      "propertyName": "commandCode",
+      "nameTranslations": [
+        {
+          "languageCode": "nb",
+          "languageText": "Kommandokode"
+        }
+      ],
+      "descriptionTranslations": [
+        {
+          "languageCode": "nb",
+          "languageText": "Strukturert informasjon brukt av et system for å prossesere instruksjonen"
+        }
+      ]
+    }
+  ]
+}
