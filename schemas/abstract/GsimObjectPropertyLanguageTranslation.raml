@@ -1,0 +1,26 @@
+#%RAML 1.0 Library
+uses:
+  MultilingualText: ./MultilingualText.raml
+
+types:
+
+  GsimObjectPropertyLanguageTranslation:
+    description: A reusable type for assigning multilingual text to name and description on the properties of an object
+    displayName: GSIM object property language translation
+    type: object
+
+    properties:
+      propertyNameTranslations?:
+        type: MultilingualText.MultilingualText[]
+        description: Language translations for the name of a property
+        displayName: Name translations
+
+      propertyDescriptionTranslations?:
+        type: MultilingualText.MultilingualText[]
+        description: Language translations for the description of a property
+        displayName: Description translations
+
+      propertyName:
+        type: string
+        description: Name of the property
+        displayName: Property name
