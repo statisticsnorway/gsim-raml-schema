@@ -30,6 +30,16 @@ types:
           - ACCUMULATED
           - FIXED
 
+      valuation?:
+        type: string
+        description: Classification of the value or damage potential of a dataset
+        displayName: Valuation
+        enum:  
+          - SENSITIVE  # 1
+          - SHIELDED   # 2
+          - INTERNAL   # 3
+          - OPEN       # 4
+
       dataExistsFromDate?:
         type: datetime
         description: The date on which data is effective or valid.
