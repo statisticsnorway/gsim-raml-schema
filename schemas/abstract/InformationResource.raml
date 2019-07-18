@@ -13,7 +13,7 @@ types:
          displayName: Parent resource
          (Link.types): [DataResource]
 
-
-    # TODO: Add properties from LDM. Unsure what the use for these are
-    #  * location ?
-    #  * owner ?  # is this the same as IdentifiableArtefact.agentInRoles
+      owner: 
+        type: string
+        displayName: Owner
+        (Link.types): [ProvisionAgreement, StatisticalProgram]

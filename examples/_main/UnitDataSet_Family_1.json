@@ -12,6 +12,7 @@
       "languageText": "Dataset for families in Norway per 2018-01-01"
     }
   ],
+  "valuation": "SENSITIVE",
   "administrativeStatus": "OPEN",
   "version": "1.0.0",
   "versionValidFrom": "2018-01-01T00:00:00.000Z",

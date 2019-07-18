@@ -42,7 +42,7 @@ types:
         displayName: Sentinel value domain
         (Link.types): [EnumeratedValueDomain, DescribedValueDomain]
 
-      format?:
+      formatMask?:
         type: string
         description: This attribute describes the data-format of the instance variable. For example a date-format-mask.
         displayName: Format
@@ -76,6 +76,13 @@ types:
           - POINT
           - POLYGON
           - LINE
+
+      mandatory?:
+        type: boolean
+        default: false
+        description: Is the variable mandatory or not
+        displayName: Mandatory
+
 
 
     example: !include ../examples/_main/InstanceVariable_FamilyType.json
