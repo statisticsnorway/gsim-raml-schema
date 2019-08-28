@@ -190,7 +190,7 @@ Structures|Dimensional Data Set|![usable](http://progressed.io/bar/50)|
 Structures|Information Resource|![usable](http://progressed.io/bar/80)| Abstract Object
 Structures|Data Resource|![usable](http://progressed.io/bar/80)|
 Structures|Logical Record|![usable](http://progressed.io/bar/90)|
-Structures|Record Relationship|![usable](http://progressed.io/bar/80)| Implemented as a parent-child link (attribute) in `Logical Record`
+Structures|Record Relationship|![usable](http://progressed.io/bar/100)| Implemented as a parent-child link (attribute) in `Logical Record`
 Structures|Statistical Register Persons|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `DataResource.dataResourceType`
 Structures|Establishment Enterprise Register|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `DataResource.dataResourceType`
 Business|Assessment|![usable](http://progressed.io/bar/50)|
