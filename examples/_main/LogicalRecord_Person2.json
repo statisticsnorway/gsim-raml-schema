@@ -19,6 +19,9 @@
      "languageText": "Record for personinformation that belongs to a family"
    }
  ],
+ "parentLogicalRecord": "/LogicalRecord/40c192fe-4da5-49a3-9369-0ea2db0387a7",
+ "parentChildMultiplicity": "ONE_MANY",
+ "isPlaceholderRecord": false,
  "instanceVariables": [
    "/InstanceVariable/09c24ccd-6765-4d8c-84ae-b4c7d55ad4ea",
    "/InstanceVariable/f908b24d-e5c4-4954-bcab-02a2e4724af3",
