@@ -11,13 +11,6 @@ types:
     type:  IdentifiableArtefact.IdentifiableArtefact
 
     properties:
-      # COMMENT:
-      # This link to InstanceVariable is a simplification of the GSIM logical Data Model (LDM) and replaces
-      # the links to IdentifierComponent, MeasureComponent and AttributeComponent objects in LDM.
-      instanceVariables:
-        type: string[]
-        displayName: Instance variables
-        (Link.types): [InstanceVariable]
 
       unitType:
         type: string
@@ -26,7 +19,43 @@ types:
 
       shortName:
         type: string
-        description: A short technical name in CAPITAL LETTERS. Use underscore as word separator (no other special characters allowed).
+        description: A short technical name. (Avoid special characters not supported as variable or object names in common programming languages).
         displayName: Short name
+
+      # COMMENT:
+      # This self-referencing link (parentLogicalRecord) is a simplification of the GSIM logical Data Model (LDM)
+      # and replaces the RecordRelationship object in LDM.
+      # Use the parentLogicalRecord-link to describe a hierarchical UnitDataSet (e.g. Parquet, XML or JSON dataset)
+      # For a hierarchical UnitDataSet the parentLogicalRecord-link is not set for the root-LogicalRecord.
+      parentLogicalRecord?:
+        type: string
+        displayName: Parent logical record
+        (Link.types): [LogicalRecord]
+
+      parentChildMultiplicity?:
+        type: string
+        enum:
+         - ZERO_ONE
+         - ONE_ONE
+         - ZERO_MANY
+         - ONE_MANY
+        description: Describes the multiplicity of this LogicalRecord when a link to parentLogicalRecord exists.
+        displayName: Parent child multiplicity
+
+      isPlaceholderRecord:
+        type: boolean
+        default: false
+        description: If true this is a placeholder-record (only a grouping of other records in a hierarchical UnitDataSet), but without link(s) to any InstanceVariables.
+        displayName: Is placeholder record
+
+      # COMMENT:
+      # This link to InstanceVariable is a simplification of the GSIM logical Data Model (LDM) and replaces
+      # the links to IdentifierComponent, MeasureComponent and AttributeComponent objects in LDM.
+      # The instanceVariables-link is mandatory for all LogicalRecords except for PlaceholderRecords.
+      instanceVariables?:
+        type: string[]
+        displayName: Instance variables
+        (Link.types): [InstanceVariable]
+
 
     example: !include ../examples/_main/LogicalRecord_Person_1.json

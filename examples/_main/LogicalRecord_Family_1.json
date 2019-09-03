@@ -18,6 +18,7 @@
   "validFrom": "2018-01-01T00:00:00.000Z",
   "createdDate": "2018-01-01T00:00:00.000Z",
   "createdBy": "OHV",
+  "isPlaceholderRecord": false,
   "instanceVariables": [
     "/InstanceVariable/e2288748-7d26-4690-b07b-30a58c4a41f4",
     "/InstanceVariable/98bf9718-3964-4eb7-a966-3be58d3b9e55",
