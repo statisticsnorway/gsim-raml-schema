@@ -12,34 +12,34 @@ types:
     type: [ IdentifiableArtefact.IdentifiableArtefact]
 
     properties:
-      parameterInputs?:
-        type: string[]
-        displayName: Parameter inputs
+      parameterInput?:
+        type: string
+        displayName: Parameter input
         (Link.types): [ParameterInput]
 
-      transformableInputs?:
-        type: string[]
-        displayName: Transformable inputs
+      transformableInput?:
+        type: string
+        displayName: Transformable input
         (Link.types): [TransformableInput]
 
-      processSupportInputs?:
-        type: string[]
-        displayName: Process support inputs
+      processSupportInput?:
+        type: string
+        displayName: Process support input
         (Link.types): [ProcessSupportInput]
 
-      transformedOutputs?:
-        type: string[]
-        displayName: Transformed outputs
+      transformedOutput?:
+        type: string
+        displayName: Transformed output
         (Link.types): [TransformedOutput]
 
-      processMetrics?:
-        type: string[]
-        displayName: Process metrics
+      processMetric?:
+        type: string
+        displayName: Process metric
         (Link.types): [ProcessMetric]
 
-      processExecutionLogs?:
-        type: string[]
-        displayName: Process execution logs
+      processExecutionLog?:
+        type: string
+        displayName: Process execution log
         (Link.types): [ProcessExecutionLog]
 
     #example: !include ../examples/ProcessStepInstance.json
