@@ -8,7 +8,16 @@ types:
     description: A type of Process Input whose content goes into a Process Step and is changed in some way by the execution of that Process Step. Some or all of the content will be represented in the Transformed Output.
     displayName: Transformable input
     type: [IdentifiableArtefact.IdentifiableArtefact, ProcessInput.ProcessInput]
-    properties:
 
+    properties:
+      dataSets?:
+        type: string[]
+        displayName: Input datasets
+        (Link.types): [UnitDataSet, DimensionalDataSet]
+    
+    # For future additional input-types, add another property. 
+    # This would be easier to implement than using key-value (type enum + link)
+        
+    
     #example: !include ../examples/TransformableInput.json
 
