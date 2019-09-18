@@ -10,14 +10,23 @@ types:
     type: [IdentifiableArtefact.IdentifiableArtefact, ProcessInput.ProcessInput]
 
     properties:
-      dataSets?:
-        type: string[]
-        displayName: Input datasets
+      inputType:
+        type: string
+        description: Type of input resource (e.g. UnitDataSet, DimensionalDataSet, ...)
+        displayName: Input type
+        enum:
+          - DATASET
+
+      inputId:
+        type: string
+        displayName: Input id
         (Link.types): [UnitDataSet, DimensionalDataSet]
-    
-    # For future additional input-types, add another property. 
-    # This would be easier to implement than using key-value (type enum + link)
-        
+
+      inputAlias?:
+        type: string
+        displayName: Resource alias 
+        description: Alias used in code when referring to the resource
+       
     
     #example: !include ../examples/TransformableInput.json
 
