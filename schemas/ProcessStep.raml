@@ -2,6 +2,7 @@
 uses:
   Link: ./annotation/Link.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  CodeBlockDetails: ./abstract/ProcessStepCodeBlockDetails.raml
 
 types:
 
@@ -15,7 +16,7 @@ types:
         description: Used to indicate whether this ProcessStep has sub-ProcessSteps.
         displayName: Is comprehensive
 
-      parentProcessStep?: #TODO: Should this be an array ?
+      parentProcessStep?: 
         type: string
         displayName: Parent process step
         (Link.types): [ProcessStep]
@@ -25,10 +26,16 @@ types:
         displayName: Process step instances
         (Link.types): [ProcessStepInstance]
 
-      processControl: #TODO: should this instead be optional ?
+      processControl?: 
         type: string
         displayName: Process control
         (Link.types): [ProcessControl]
+
+      codeBlocks?:
+        type: CodeBlockDetails.ProcessStepCodeBlockDetails[]
+        description: Code blocks
+        displayName: Code block details
+
 
 
   #example: !include ../examples/Sirius/ProcessStepExamplePseudonymiser.json
