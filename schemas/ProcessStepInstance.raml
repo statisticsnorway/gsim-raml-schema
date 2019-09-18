@@ -17,29 +17,34 @@ types:
         displayName: Code block
         description: The action to take place as executable code
     
-      parameterInput?:
+      codeType:  #TODO: maybe not nessessary
         type: string
-        displayName: Parameter input
+        displayName: Type of code
+        description: Type of code (language, system executed in, etc)
+
+      parameterInputs?:
+        type: string[]
+        displayName: Parameter inputs
         (Link.types): [ParameterInput]
 
-      transformableInput?:
-        type: string
-        displayName: Transformable input
+      transformableInputs?:
+        type: string[]
+        displayName: Transformable inputs
         (Link.types): [TransformableInput]
 
-      processSupportInput?:
-        type: string
-        displayName: Process support input
+      processSupportInputs?:
+        type: string[]
+        displayName: Process support inputs
         (Link.types): [ProcessSupportInput]
 
-      transformedOutput?:
-        type: string
-        displayName: Transformed output
+      transformedOutputs?:
+        type: string[]
+        displayName: Transformed outputs
         (Link.types): [TransformedOutput]
 
-      processMetric?:
-        type: string
-        displayName: Process metric
+      processMetrics?:
+        type: string[]
+        displayName: Process metrics
         (Link.types): [ProcessMetric]
 
       processExecutionLog?:
