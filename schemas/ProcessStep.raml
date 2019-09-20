@@ -2,7 +2,7 @@
 uses:
   Link: ./annotation/Link.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
-  CodeBlockDetails: ./abstract/ProcessStepCodeBlockDetails.raml
+  ProcessStepCodeBlockDetails: ./abstract/ProcessStepCodeBlockDetails.raml
 
 types:
 
@@ -32,7 +32,7 @@ types:
         (Link.types): [ProcessControl]
 
       codeBlocks?:
-        type: CodeBlockDetails.ProcessStepCodeBlockDetails[]
+        type: ProcessStepCodeBlockDetails.ProcessStepCodeBlockDetails[]
         description: Code blocks
         displayName: Code block details
 
