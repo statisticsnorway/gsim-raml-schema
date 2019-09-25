@@ -12,14 +12,7 @@ types:
     type: [IdentifiableArtefact.IdentifiableArtefact, InformationResource.InformationResource]
 
     properties:
-      dataResourceType?:
-        type: string
-        displayName: Data resource type
-        enum:
-          - STATISTICAL_REGISTER_PERSONS
-          - ETABLISHMENT_ENTERPRISE_REGISTER
-
       dataSets?:
         type: string[]
         displayName: Data Sets
-        (Link.types): [UnitDataSet, DimensionalDataSet]
+        (Link.types): [UnitDataSet, DimensionalDataSet, RawDataStoreDataSet]

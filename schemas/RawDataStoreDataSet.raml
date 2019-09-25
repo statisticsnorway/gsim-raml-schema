@@ -1,0 +1,13 @@
+#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  DataSet: ./abstract/DataSet.raml
+
+types:
+  RawDataStoreDataSet:
+    description: A collection of data sets in the raw data store
+    displayName: Raw Data Store data set
+    type: [ IdentifiableArtefact.IdentifiableArtefact, DataSet.DataSet ]
+
+    properties:
