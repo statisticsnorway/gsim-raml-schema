@@ -6,8 +6,8 @@ steps:
   - name: test
     image: docker:19.03-dind
     #privileged: true
-    environment:
-      - DOCKER_HOST=tcp://docker:2375
+    #environment:
+    #  - DOCKER_HOST=tcp://docker:2375
     commands:
       - sleep 5
       - docker ps
