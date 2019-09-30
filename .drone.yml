@@ -9,7 +9,7 @@ steps:
     #environment:
     #  - DOCKER_HOST=tcp://docker:2375
     commands:
-      - sleep 5
+      - sleep 20
       - docker ps
       - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema
     when:
