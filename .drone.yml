@@ -1,0 +1,18 @@
+kind: pipeline
+name: default
+
+steps:
+
+  - name: test
+    image: docker:stable
+    privileged: true
+    commands:
+        docker run
+        -v $(pwd):/raml-project
+        statisticsnorway/raml-to-jsonschema
+    when:
+    event:
+      exclude:
+      - pull_request
+    branch:
+    - devtest
