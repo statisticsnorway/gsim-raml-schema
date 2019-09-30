@@ -3,11 +3,9 @@ name: default
 
 steps:
 
-  - name: test
-    image: docker:stable-dind
+  - name: build
     commands:
-      - sleep 5
-      - docker ps
+      - docker -v
       - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema
     when:
       event:
