@@ -5,7 +5,7 @@ steps:
 
   - name: test
     image: docker:stable
-    privileged: true
+    #privileged: true
     commands:
         - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema
     when:
