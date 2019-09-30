@@ -4,12 +4,11 @@ name: default
 steps:
 
   - name: test
-    image: docker:19.03-dind
-    #privileged: true
-    #environment:
-    #  - DOCKER_HOST=tcp://docker:2375
-    commands:
-      - sleep 20
+    image: quay.io/testcontainers/dind-drone-plugin
+    build_image: openjdk:8-jdk
+    cmd: java -v
+      -
+      - sleep 5
       - docker ps
       - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema
     when:
