@@ -4,13 +4,17 @@ name: default
 steps:
 
   - name: test
-    image: docker:stable-dind
+    image: docker:19.03-dind
     #privileged: true
+    environment:
+      - DOCKER_HOST=tcp://docker:2375
     commands:
-        - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema
+      - sleep 5
+      - docker ps
+      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema
     when:
-    event:
-      exclude:
-      - pull_request
-    branch:
-    - devtest
+      event:
+        exclude:
+        - pull_request
+      branch:
+      - devtest
