@@ -2,6 +2,7 @@
 uses:
   Link: ./annotation/Link.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  ProcessStepCodeBlockDetails: ./abstract/ProcessStepCodeBlockDetails.raml
 
 types:
 
@@ -9,13 +10,14 @@ types:
     description: A Process Step is a work package that performs a Business Process. A Process Step implements the Process Step Design specified in order to produce the outputs for which the Process Step was designed.
     displayName: Process step
     type: IdentifiableArtefact.IdentifiableArtefact
+
     properties:
       isComprehensive: # TODO:Is this oboslete as we also have parentProcessStep?
         type: boolean
         description: Used to indicate whether this ProcessStep has sub-ProcessSteps.
         displayName: Is comprehensive
 
-      parentProcessStep?: #TODO: Should this be an array ?
+      parentProcessStep?: 
         type: string
         displayName: Parent process step
         (Link.types): [ProcessStep]
@@ -25,10 +27,14 @@ types:
         displayName: Process step instances
         (Link.types): [ProcessStepInstance]
 
-      processControl: #TODO: should this instead be optional ?
+      processControl?: 
         type: string
         displayName: Process control
         (Link.types): [ProcessControl]
 
+      codeBlocks?:
+        type: ProcessStepCodeBlockDetails.ProcessStepCodeBlockDetails[]
+        description: Code blocks
+        displayName: Code block details
 
-  #example: !include ../examples/Sirius/ProcessStepExamplePseudonymiser.json
+    example: !include ../examples/_main/ProcessStep_Test.json

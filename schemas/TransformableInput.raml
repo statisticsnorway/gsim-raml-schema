@@ -1,5 +1,6 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Link: ./annotation/Link.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ProcessInput: ./abstract/ProcessInput.raml
 types:
@@ -8,7 +9,25 @@ types:
     description: A type of Process Input whose content goes into a Process Step and is changed in some way by the execution of that Process Step. Some or all of the content will be represented in the Transformed Output.
     displayName: Transformable input
     type: [IdentifiableArtefact.IdentifiableArtefact, ProcessInput.ProcessInput]
-    properties:
 
+    properties:
+      inputType:
+        type: string
+        description: Type of input resource (e.g. UnitDataSet, DimensionalDataSet, ...)
+        displayName: Input type
+        enum:
+          - DATASET
+
+      inputId:
+        type: string
+        displayName: Input id
+        (Link.types): [UnitDataSet, DimensionalDataSet]
+
+      inputAlias?:
+        type: string
+        displayName: Resource alias 
+        description: Alias used in code when referring to the resource
+       
+    
     #example: !include ../examples/TransformableInput.json
 
