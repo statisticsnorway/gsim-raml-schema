@@ -5,7 +5,9 @@ steps:
   - name: build
     image: plugins/docker
     commands:
-      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema:latest
+      - ls -lah
+      - sudo service docker status
+#      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema:latest
     when:
       event:
       - push
