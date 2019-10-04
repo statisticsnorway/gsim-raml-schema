@@ -4,18 +4,11 @@ name: gsim-raml-schema
 steps:
   - name: build
     image: docker
-    volumes:
-      - name: cache
-        path: /gsim
     commands:
       - ls -lah
-#      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema:latest
+      - docker run -v /:/raml-project statisticsnorway/raml-to-jsonschema:latest
     when:
       event:
       - push
       branch:
       - devtest
-
-volumes:
-  - name: cache
-    temp: {}
