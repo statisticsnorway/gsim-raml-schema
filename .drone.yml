@@ -13,7 +13,7 @@ steps:
     image: maven:3-jdk-8-slim
     commands:
       - ls -lah
-      - mvn dependency:get -DartifactId=no.ssb.raml:raml-to-jsonschema:0.15-20191004.100316-1:jar -DremoteRepositories=https://nexus.prod-bip-ci.ssb.no/repository/maven-snapshots/ -Ddest=/ --global-settings settings.xml
+      - mvn dependency:get -Dartifact=no.ssb.raml:raml-to-jsonschema:0.15-20191004.100316-1:jar:sources -Dtransative=false -DremoteRepositories=https://nexus.prod-bip-ci.ssb.no/repository/maven-snapshots/ -Ddest=/ --global-settings settings.xml
       - ls -lah
     when:
       event:
