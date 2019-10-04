@@ -6,7 +6,7 @@ steps:
     image: plugins/docker
     commands:
       - ls -lah
-      - sudo service docker status
+      - service docker status
 #      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema:latest
     when:
       event:
