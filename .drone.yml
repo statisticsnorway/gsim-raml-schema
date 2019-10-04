@@ -2,22 +2,50 @@ kind: pipeline
 name: gsim-raml-schema
 
 steps:
-  - name: build
-    image: plugins/docker
+  - name: authenticate
+    image: robertstettner/drone-mvn-auth
+    pull: always
     settings:
-      debug: true
-    volumes:
-      - name: cache
-        path: /gsim
+      servers:
+        from_secret: maven_servers
+
+  - name: build
+    image: maven:3-jdk-8-slim
     commands:
       - ls -lah
-      - docker run -v /:/raml-project statisticsnorway/raml-to-jsonschema:latest
+      - mvn package -P ssb-bip --batch-mode --global-settings settings.xml
+      - ls -lah
     when:
       event:
       - push
       branch:
       - devtest
 
-volumes:
-  - name: cache
-    temp: {}
+  - name: slack
+    image: plugins/slack
+    settings:
+      webhook:
+        from_secret: slack_webhook_url
+#      channel: bip-ci-test -- Choosing channel is not enabled yet
+      template: >
+        {{#success build.status}}
+          *Success*! {{uppercasefirst build.event}} - {{build.link}}. Good job *{{build.author}}*!
+        {{else}}
+          *Failure*! {{uppercasefirst build.event}} - {{build.link}}. Your fault *{{build.author}}*!
+        {{/success}}
+    when:
+      status: [ success, failure ]
+
+---
+kind: secret
+name: maven_servers
+get:
+  path: drone-maven-servers
+  name: ssb-bip-maven-servers
+
+---
+kind: secret
+name: slack_webhook_url
+get:
+  path: drone-slack-webhook-url
+  name: slack-webhook-url
