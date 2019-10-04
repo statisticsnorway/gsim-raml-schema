@@ -3,11 +3,9 @@ name: gsim-raml-schema
 
 steps:
   - name: build
-    image: maven:3-jdk-8-slim
+    image: plugins/docker
     commands:
-      - ls -lah
-      - git clone https://github.com/statisticsnorway/raml-to-jsonschema.git
-      - ls -lah
+      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema:latest
     when:
       event:
       - push
