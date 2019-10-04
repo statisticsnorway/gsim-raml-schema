@@ -1,23 +1,21 @@
 kind: pipeline
-name: default
+name: gsim-raml-schema
 
 steps:
-
   - name: build
-    image: docker:stable-dind
-    privileged: true
+    image: docker
+    volumes:
+      - name: cache
+        path: /gsim
     commands:
-      #privileged: true
-      - docker -v
-      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema
+      - ls -lah
+#      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema:latest
     when:
       event:
-        exclude:
-        - pull_request
+      - push
       branch:
       - devtest
-    volumes:
-      - name: docker_run
-        path: /var/run/
-      - name: docker_lib
-        path:  /var/lib/docker
+
+volumes:
+  - name: cache
+    temp: {}
