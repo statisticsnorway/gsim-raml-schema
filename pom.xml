@@ -33,15 +33,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.1.1</version>
-                <executions>
-                    <execution>
-                        <id>copy</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <artifactItems>
                         <artifactItem>
@@ -49,9 +40,10 @@
                             <artifactId>raml-to-jsonschema</artifactId>
                             <version>0.15-20191004.100316-1</version>
                             <type>jar</type>
-                            <outputDirectory>./</outputDirectory>
+                            <destFileName>raml-to-jsonschema.jar</destFileName>
                         </artifactItem>
                     </artifactItems>
+                    <localRepositoryDirectory>./</localRepositoryDirectory>
                 </configuration>
             </plugin>
         </plugins>

@@ -13,7 +13,7 @@ steps:
     image: maven:3-jdk-8-slim
     commands:
       - ls -lah
-      - mvn package -P ssb-bip --batch-mode --global-settings settings.xml
+      - mvn dependency:copy -P ssb-bip --batch-mode --global-settings settings.xml
       - ls -lah
     when:
       event:
