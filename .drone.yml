@@ -2,18 +2,11 @@ kind: pipeline
 name: gsim-raml-schema
 
 steps:
-  - name: authenticate
-    image: robertstettner/drone-mvn-auth
-    pull: always
-    settings:
-      servers:
-        from_secret: maven_servers
-
   - name: build
     image: maven:3-jdk-8-slim
     commands:
       - ls -lah
-      - mvn dependency:get -Dartifact=no.ssb.raml:raml-to-jsonschema:0.15-20191004.100316-1:jar:sources -Dtransative=false -DremoteRepositories=https://nexus.prod-bip-ci.ssb.no/repository/maven-snapshots/ -Ddest=/ --global-settings settings.xml
+      - git clone https://github.com/statisticsnorway/raml-to-jsonschema.git
       - ls -lah
     when:
       event:
@@ -35,13 +28,6 @@ steps:
         {{/success}}
     when:
       status: [ success, failure ]
-
----
-kind: secret
-name: maven_servers
-get:
-  path: drone-maven-servers
-  name: ssb-bip-maven-servers
 
 ---
 kind: secret
