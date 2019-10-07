@@ -45,7 +45,7 @@ steps:
     settings:
       webhook:
         from_secret: slack_webhook_url
-      channel: bip-ci-test -- Choosing channel is not enabled yet
+#      channel: bip-ci-test -- Choosing channel is not enabled yet
       template: >
         {{#success build.status}}
           *Success*! {{uppercasefirst build.event}} - {{build.link}}. Good job *{{build.author}}*!
