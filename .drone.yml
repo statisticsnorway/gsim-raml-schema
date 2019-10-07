@@ -2,12 +2,20 @@ kind: pipeline
 name: gsim-raml-schema
 
 steps:
+  - name: prepare
+    image: docker:git
+    commands:
+      - git clone https://github.com/statisticsnorway/raml-to-jsonschema.git
+    when:
+      event:
+        - push
+      branch:
+        - devtest
+
   - name: build
-    image: plugins/docker
+    image: maven:3-jdk-8-slim
     commands:
       - ls -lah
-      - service docker status
-#      - docker run -v $(pwd):/raml-project statisticsnorway/raml-to-jsonschema:latest
     when:
       event:
       - push
