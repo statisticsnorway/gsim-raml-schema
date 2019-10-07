@@ -14,8 +14,8 @@ steps:
   - name: build
     image: maven:3-jdk-8-slim
     commands:
-      - mvn -f /drone/src/raml-to-jsonchema/pom.xml clean package
-      - java -jar raml-to-jsonschema-0.15-SNAPSHOT-shaded.jar /drone/src/out /drone/src/schemas
+      - mvn -f /raml-to-jsonchema/pom.xml clean package
+      - java -jar /raml-to-jsonchema/raml-to-jsonschema-0.15-SNAPSHOT-shaded.jar /drone/src/out /drone/src/schemas
       - ls -lah /drone/src/out
     when:
       event:
