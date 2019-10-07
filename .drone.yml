@@ -15,46 +15,45 @@ steps:
     image: maven:3-jdk-8-slim
     commands:
       - cd /drone/src/raml-to-jsonschema
-      - ls -lah
       - mvn clean package
-      - pwd
-      - ls -lah /drone/src/raml-to-jsonschema/target
       - cd /drone/src/raml-to-jsonschema/target
       - java -jar raml-to-jsonschema-0.15-SNAPSHOT.jar /drone/src/out /drone/src/schemas
-      - ls -lah /drone/src/out
+      - cd /drone/src
     when:
       event:
       - pull_request
       - push
 
-#  - name: publish-docker
-#    image: plugins/gcr
-#    settings:
-#      repo: prod-bip/lds-postgres-gsim
-#      registry: eu.gcr.io
-#      tags: "${DRONE_BRANCH}-${DRONE_COMMIT_SHA:0:8}"
-#      json_key:
-#        from_secret: gcr_credentials
-#    when:
-#      branch:
-#        - master
-#      event:
-#        - push
+  - name: publish-docker
+    image: plugins/gcr
+    settings:
+      repo: prod-bip/lds-postgres-gsim
+      registry: eu.gcr.io
+      tags:
+        - "${DRONE_BRANCH}-${DRONE_COMMIT_SHA:0:8}"
+        - "postgres-build-${DRONE_COMMIT_SHA:0:8}"
+      json_key:
+        from_secret: gcr_credentials
+    when:
+      branch:
+        - master
+      event:
+        - push
 
-#  - name: slack
-#    image: plugins/slack
-#    settings:
-#      webhook:
-#        from_secret: slack_webhook_url
-#      channel: bip-ci-test -- Choosing channel is not enabled yet
-#      template: >
-#        {{#success build.status}}
-#          *Success*! {{uppercasefirst build.event}} - {{build.link}}. Good job *{{build.author}}*!
-#        {{else}}
-#          *Failure*! {{uppercasefirst build.event}} - {{build.link}}. Your fault *{{build.author}}*!
-#        {{/success}}
-#    when:
-#      status: [ success, failure ]
+  - name: slack
+    image: plugins/slack
+    settings:
+      webhook:
+        from_secret: slack_webhook_url
+      channel: bip-ci-test -- Choosing channel is not enabled yet
+      template: >
+        {{#success build.status}}
+          *Success*! {{uppercasefirst build.event}} - {{build.link}}. Good job *{{build.author}}*!
+        {{else}}
+          *Failure*! {{uppercasefirst build.event}} - {{build.link}}. Your fault *{{build.author}}*!
+        {{/success}}
+    when:
+      status: [ success, failure ]
 
 trigger:
   ref:
