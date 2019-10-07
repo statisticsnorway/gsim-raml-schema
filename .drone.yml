@@ -17,9 +17,9 @@ steps:
     commands:
       - ls -lah
       - pwd
-      - cd /raml-to-jsonschema
+      - cd /drone/src/raml-to-jsonschema
       - mvn clean package
-      - pwd
+      - java -jar raml-to-jsonschema-0.15-SNAPSHOT.jar /drone/src/out /drone/src/schemas
     when:
       event:
       - push
