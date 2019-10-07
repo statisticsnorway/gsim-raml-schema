@@ -15,7 +15,9 @@ steps:
   - name: build
     image: maven:3-jdk-8-slim
     commands:
-      - ls -lah
+      - cd /raml-to-jsonschema
+      - mvn clean package
+      - pwd
     when:
       event:
       - push
