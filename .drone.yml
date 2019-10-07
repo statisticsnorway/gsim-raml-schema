@@ -17,7 +17,9 @@ steps:
       - cd /drone/src/raml-to-jsonschema
       - ls -lah
       - mvn clean package
-      - java -jar drone/src/raml-to-jsonchema/target/raml-to-jsonschema-0.15-SNAPSHOT-shaded.jar /drone/src/out /drone/src/schemas
+      - pwd
+      - ls -lah /drone/src/raml-to-jsonschema/target
+      - java -jar drone/src/raml-to-jsonchema/target/raml-to-jsonschema-0.15-SNAPSHOT.jar /drone/src/out /drone/src/schemas
       - ls -lah /drone/src/out
     when:
       event:
