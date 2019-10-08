@@ -26,16 +26,10 @@ types:
         displayName: Business services
         (Link.types): [BusinessService]
 
-
-      dateInitiated?: #TODO  Could this be the same as IdentefiableArtefact.validFrom ?
-        type: datetime
-        description: First date of validity.
-        displayName: Date initiated
-
-      dateEnded?:     #TODO  Could this be the same as IdentefiableArtefact.validUntil ?
-        type: datetime
-        description: Last date of validity.
-        displayName: Date ended
+      previousBusinessProcess?:
+        type: string
+        displayName: Previous Business Process
+        (Link.types): [BusinessProcess]
 
 
 
