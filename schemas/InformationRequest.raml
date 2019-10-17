@@ -6,17 +6,16 @@ uses:
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
-
   InformationRequest:
     description: An outline of a need for new information required for a particular purpose.
     displayName: Information request
-    type: [IdentifiableArtefact.IdentifiableArtefact, StatisticalNeed.StatisticalNeed]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, StatisticalNeed.StatisticalNeed ]
 
     properties:
       coverageOfInformationRequired:
         type: MultilingualText.MultilingualText[]
         description: Coverage of information required
-        displayName: #information requester
+        displayName: Information requester
 
       dateInformationRequired?:
         type: datetime
@@ -29,6 +28,6 @@ types:
         (Link.types): [SubjectField]
 
 
-        #informationRequester?:    TODO: We have not implemented this as it seems that its covered by IdentifiableAtrifact.agentInRoles
+      #informationRequester?:    TODO: We have not implemented this as it seems that its covered by IdentifiableAtrifact.agentInRoles
 
-        #contactDetailofRequestor: TODO: We have not implemented this as it seems that its covered by Agent.agentDetails
+      #contactDetailofRequestor: TODO: We have not implemented this as it seems that its covered by Agent.agentDetails

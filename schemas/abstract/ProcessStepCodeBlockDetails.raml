@@ -3,7 +3,6 @@ uses:
   Link: ../annotation/Link.raml
 
 types:
-
   ProcessStepCodeBlockDetails:
     description: A key-value-store for adding a complex array of code block attributes to the ProcessStep-object.
     type: object
@@ -32,8 +31,8 @@ types:
         description: Index of the code block
         displayName: Index
 
-      processStepInstances?:
-        type: string[]
-        displayName: Process step instances
+      processStepInstance?:
+        type: string
+        displayName: Process step instance
         (Link.types): [ProcessStepInstance]
   

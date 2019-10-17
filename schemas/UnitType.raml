@@ -5,11 +5,10 @@ uses:
   Concept: ./abstract/Concept.raml
 
 types:
-
   UnitType:
     description: A Unit Type is a class of objects of interest
     displayName: Unit type
-    type: [IdentifiableArtefact.IdentifiableArtefact, Concept.Concept]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, Concept.Concept ]
 
     properties:
       typeOfStatisticalUnit:
@@ -30,6 +29,5 @@ types:
         type: string[]
         displayName: Parent unit types
         (Link.types): [UnitType]
-
 
     example: !include ../examples/_main/UnitType_Municipality.json

@@ -3,7 +3,6 @@ uses:
   Link: ./annotation/Link.raml
 
 types:
-
   # COMMENT:
   # This object is not part of GSIM. This object is a GSIM extension (plugin)
   # for use in Statistics Norway.
@@ -14,6 +13,6 @@ types:
     properties:
       model_version:
         type: string
-        default: "0.6"
-        description: This version made changes to ProcessStep by adding array of code blocks
+        default: "0.7"
+        description: This version nested ProcessStepInstance inside the CodeBlocks attribute of ProcessStep
         displayName: Current model version
