@@ -4,27 +4,16 @@ uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
-
   ProcessStepInstance:
     description: An executed step in a Business Process. A Process Step Instance specifies the actual inputs to and outputs from for an occurrence of a Process Step.
     displayName: Process step instance
     type: IdentifiableArtefact.IdentifiableArtefact
 
     properties:
-      codeBlockTitle:
+      processExecutionCode:
         type: string
-        description: Title of code block
-        displayName: Code block title
-
-      codeBlock:
-        type: string
-        displayName: Code block
-        description: The action to take place as executable code
-    
-      codeType:  #TODO: maybe not nessessary
-        type: string
-        displayName: Type of code
-        description: Type of code (language, system executed in, etc)
+        displayName: Process execution code
+        description: The action that took place as executable code
 
       parameterInputs?:
         type: string[]
@@ -51,7 +40,7 @@ types:
         displayName: Process metrics
         (Link.types): [ProcessMetric]
 
-      processExecutionLog?:
+      processExecutionLog:
         type: string
         displayName: Process execution log
         (Link.types): [ProcessExecutionLog]

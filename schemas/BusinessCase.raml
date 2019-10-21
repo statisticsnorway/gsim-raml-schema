@@ -5,13 +5,12 @@ uses:
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
-
   BusinessCase:
     description: A proposal for a body of work that will deliver outputs designed to achieve outcomes. A Business Case will provide the reasoning for undertaking a Statistical Support Program to initiate a new Statistical Program Design for an existing Statistical Program, or an entirely new Statistical Program, as well as the details of the change proposed.
     displayName: Business case
-    type: [IdentifiableArtefact.IdentifiableArtefact]
-    properties:
+    type: IdentifiableArtefact.IdentifiableArtefact
 
+    properties:
       dateInitiated?:
         type: datetime
         description: Date initiated
@@ -39,12 +38,12 @@ types:
 
       objective:
         type: MultilingualText.MultilingualText[]
-        description:
+        description: The objective of the business case
         displayName: Objective
 
       deliverable:
         type: MultilingualText.MultilingualText[]
-        description:
+        description: The deliverable of the business case
         displayName: Deliverable
 
       assessments?:

@@ -4,13 +4,12 @@ uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
-
   BusinessProcess:
     description: The set of Process Steps to perform one of more Business Functions to deliver a Statistical Program Cycle or Statistical Support Program.
     displayName: Business process
     type: IdentifiableArtefact.IdentifiableArtefact
-    properties:
 
+    properties:
       processSteps:
         type: string[]
         displayName: Process steps
@@ -26,17 +25,9 @@ types:
         displayName: Business services
         (Link.types): [BusinessService]
 
+      previousBusinessProcess?:
+        type: string
+        displayName: Previous Business Process
+        (Link.types): [BusinessProcess]
 
-      dateInitiated?: #TODO  Could this be the same as IdentefiableArtefact.validFrom ?
-        type: datetime
-        description: First date of validity.
-        displayName: Date initiated
-
-      dateEnded?:     #TODO  Could this be the same as IdentefiableArtefact.validUntil ?
-        type: datetime
-        description: Last date of validity.
-        displayName: Date ended
-
-
-
-    #example: !include ../examples/Sirius/BusinessProcessExampleSamleinnHendelserSkatt.json
+    example: !include ../examples/_main/BusinessProcess_Example_1.json

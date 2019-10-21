@@ -5,11 +5,10 @@ uses:
   Concept: ./abstract/Concept.raml
 
 types:
-
   Population:
     description: The total membership of a defined class of people, objects or events.
     displayName: Population
-    type: [IdentifiableArtefact.IdentifiableArtefact, Concept.Concept]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, Concept.Concept ]
 
     properties:
       populationType:
@@ -43,7 +42,6 @@ types:
          - ADRESS
          - CADASTRE
          - GEOLOCATION
-
 
       universes:
         type: string[]

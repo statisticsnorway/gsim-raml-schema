@@ -5,7 +5,6 @@ uses:
   ProcessStepCodeBlockDetails: ./abstract/ProcessStepCodeBlockDetails.raml
 
 types:
-
   ProcessStep:
     description: A Process Step is a work package that performs a Business Process. A Process Step implements the Process Step Design specified in order to produce the outputs for which the Process Step was designed.
     displayName: Process step
@@ -17,24 +16,24 @@ types:
         description: Used to indicate whether this ProcessStep has sub-ProcessSteps.
         displayName: Is comprehensive
 
+      codeBlocks?:
+        type: ProcessStepCodeBlockDetails.ProcessStepCodeBlockDetails[]
+        description: Code blocks
+        displayName: Code block details
+
+      technicalPackageID?:
+        type: string
+        description: ID or URI of technical implementation 
+        displayName: Techical ID
+
       parentProcessStep?: 
         type: string
         displayName: Parent process step
         (Link.types): [ProcessStep]
 
-      processStepInstances?:
-        type: string[]
-        displayName: Process step instances
-        (Link.types): [ProcessStepInstance]
-
       processControl?: 
         type: string
         displayName: Process control
         (Link.types): [ProcessControl]
-
-      codeBlocks?:
-        type: ProcessStepCodeBlockDetails.ProcessStepCodeBlockDetails[]
-        description: Code blocks
-        displayName: Code block details
 
     example: !include ../examples/_main/ProcessStep_Test.json

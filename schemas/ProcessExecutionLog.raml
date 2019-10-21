@@ -2,12 +2,12 @@
 uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ProcessOutput: ./abstract/ProcessOutput.raml
-types:
 
+types:
   ProcessExecutionLog:
     description: The Process Execution Log captures the output of a Process Step which is not directly related to the Transformed Output it produced. It may include data that was recorded during the real time execution of the Process Step.
     displayName: Process execution log
-    type: [IdentifiableArtefact.IdentifiableArtefact, ProcessOutput.ProcessOutput]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, ProcessOutput.ProcessOutput ]
 
     properties:
       processId?:     #TODO What is this.... could it be a link to ProcessStpeInstance?
@@ -45,4 +45,4 @@ types:
         description: The severity for the event that occurred during the process execution.
         displayName: Log severity
 
-    #example: !include ../examples/ProcessExecutionLogExample.json
+    example: !include ../examples/_main/ProcessExecutionLog_Example.json

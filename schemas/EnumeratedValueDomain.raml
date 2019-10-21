@@ -7,7 +7,7 @@ types:
   EnumeratedValueDomain:
     description: A Value Domain expressed as a list of Categories and associated Codes.
     displayName: Enumerated value domain
-    type: [IdentifiableArtefact.IdentifiableArtefact, ValueDomain.ValueDomain]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, ValueDomain.ValueDomain ]
 
     properties:
       klassUrl:
@@ -15,9 +15,8 @@ types:
         description: The url to KLASS codelist.
         displayName: Klass url
 
-        # Notes:
-        # KLASS (Statistics Norways system for classifications and Codelists) is also based on GSIM,
-        # and will hopefully in the future be a part of the RAML spesifications of this project.
-
+    # Notes:
+    # KLASS (Statistics Norways system for classifications and Codelists) is also based on GSIM,
+    # and will hopefully in the future be a part of the RAML spesifications of this project.
 
     example: !include ../examples/_main/EnumeratedValueDomain_Family.json

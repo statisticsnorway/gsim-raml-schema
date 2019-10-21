@@ -4,14 +4,12 @@ uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
-
   ProcessDesign:
     description: The specification of how a Process Step will be performed. This includes specifying the types of Process Inputs required and the type of Process Outputs that will be produced.
     displayName: Process design
     type: IdentifiableArtefact.IdentifiableArtefact
+
     properties:
-
-
       processSteps?:
         type: string[]
         displayName: Process steps
