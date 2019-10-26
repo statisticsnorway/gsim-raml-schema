@@ -17,5 +17,6 @@
   "isPlaceholderProcess": false,
   "processSteps": [
     "/ProcessStep/ecd92c16-8119-4106-bc65-70dcc858d1cc"
-  ]
+  ],
+  "parentBusinessProcess": "/BusinessProcess/010bfa55-bd1c-4e7e-ae30-b8014c9fe623"
 }
