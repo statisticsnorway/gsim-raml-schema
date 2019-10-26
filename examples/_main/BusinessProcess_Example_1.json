@@ -14,6 +14,7 @@
   "lastUpdatedBy": "Test user",
   "validFrom": "2019-10-09T09:28:09.127Z",
   "validUntil": "2020-10-09T13:01:51.672Z",
+  "isPlaceholderProcess": false,
   "processSteps": [
     "/ProcessStep/1eef14a0-ff0c-4f43-9416-e9c871326c82"
   ],
