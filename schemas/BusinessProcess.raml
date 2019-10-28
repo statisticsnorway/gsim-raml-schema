@@ -10,7 +10,13 @@ types:
     type: IdentifiableArtefact.IdentifiableArtefact
 
     properties:
-      processSteps:
+      isPlaceholderProcess:
+        type: boolean
+        default: false
+        description: If true this is a placeholder-process (only a grouping of other businessprocesses in a hierarchical manner), but without link(s) to any ProcessSteps.
+        displayName: Is placeholder process
+    
+      processSteps?:
         type: string[]
         displayName: Process steps
         (Link.types): [ProcessStep]
@@ -30,4 +36,9 @@ types:
         displayName: Previous Business Process
         (Link.types): [BusinessProcess]
 
+      parentBusinessProcess?:
+        type: string
+        displayName: Parent Business Process
+        (Link.types): [BusinessProcess]
+        
     example: !include ../examples/_main/BusinessProcess_Example_1.json
