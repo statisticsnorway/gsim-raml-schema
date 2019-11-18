@@ -32,11 +32,6 @@ types:
             - MEASURE
             - ATTRIBUTE
 
-      shortName:
-        type: string
-        description: A short technical name. (Avoid special characters not supported as variable names in common programming languages).
-        displayName: Short name
-
       sentinelValueDomain?:
         type: string
         displayName: Sentinel value domain
@@ -82,5 +77,10 @@ types:
         default: false
         description: Is the variable mandatory or not
         displayName: Mandatory
+
+      physicalDataType?:
+        type: string
+        description: Data type of instance variable
+        displayName: Data type   
 
     example: !include ../examples/_main/InstanceVariable_FamilyType.json
