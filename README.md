@@ -1,5 +1,5 @@
 # gsim-raml-schema
-Statistics Norway is modernizing its core systems for statistical production. Statistics Norway implements a logical data model based on the UN standard [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model).
+Statistics Norway is modernizing its core systems for statistical production. Statistics Norway implements a logical data model based on the UNECE standard [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model).
 
 This project is documentation of the physical design using [RAML](https://raml.org/) (RESTful API Modeling Language).
 
