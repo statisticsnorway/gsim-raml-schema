@@ -15,6 +15,7 @@ The raml-files in this project follows the RAML 1.0 spesification.
 
 We only use the `data types` section of RAML. There are no endpoints or methods. Those are automatically generated using [Linked Data Store ](https://github.com/statisticsnorway/linked-data-store-documentation).
 
+A generated [Umlet](https://www.umlet.com/) diagram/model of the raml-files is available in [raml-to-umlet-diagram](https://github.com/statisticsnorway/raml-to-umlet-diagram)
 
 ### Inheritance
 Objects that are abstract in GSIM is maintained in the folder `/schemas/abstract/`.
