@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   ProcessStepInstance:
+    (Doc.objectGsimGroup): BUSINESS
     description: An executed step in a Business Process. A Process Step Instance specifies the actual inputs to and outputs from for an occurrence of a Process Step.
     displayName: Process step instance
     type: IdentifiableArtefact.IdentifiableArtefact

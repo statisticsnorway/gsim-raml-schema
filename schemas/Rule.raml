@@ -1,9 +1,11 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   Rule:
+    (Doc.objectGsimGroup): BUSINESS
     description: A specific mathematical or logical expression which can be evaluated to determine specific behavior.
     displayName: Rule
     type: IdentifiableArtefact.IdentifiableArtefact

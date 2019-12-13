@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ProcessInput: ./abstract/ProcessInput.raml
 
 types:
   ProcessSupportInput:
+    (Doc.objectGsimGroup): BUSINESS
     description: A form of Process Input that influences the work performed by the Process Step, and therefore influences its outcome.
     displayName: Process support input
     type: [ IdentifiableArtefact.IdentifiableArtefact, ProcessInput.ProcessInput ]

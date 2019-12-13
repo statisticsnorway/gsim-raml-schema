@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
   ProvisionAgreement:
+    (Doc.objectGsimGroup): EXCHANGE
     description: The legal or other basis by which two parties agree to exchange data.
     displayName: Provision agreement
     type: IdentifiableArtefact.IdentifiableArtefact

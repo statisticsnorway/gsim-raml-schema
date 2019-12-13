@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ProcessStepCodeBlockDetails: ./abstract/ProcessStepCodeBlockDetails.raml
 
 types:
   ProcessStep:
+    (Doc.objectGsimGroup): BUSINESS
     description: A Process Step is a work package that performs a Business Process. A Process Step implements the Process Step Design specified in order to produce the outputs for which the Process Step was designed.
     displayName: Process step
     type: IdentifiableArtefact.IdentifiableArtefact
@@ -23,20 +25,20 @@ types:
 
       technicalPackageID?:
         type: string
-        description: ID or URI of technical implementation 
+        description: ID or URI of technical implementation
         displayName: Techical ID
 
-      parentProcessStep?: 
+      parentProcessStep?:
         type: string
         displayName: Parent process step
         (Link.types): [ProcessStep]
 
-      processControl?: 
+      processControl?:
         type: string
         displayName: Process control
         (Link.types): [ProcessControl]
 
-      previousProcessStep?: 
+      previousProcessStep?:
         type: string
         displayName: Previous process step
         (Link.types): [ProcessStep]

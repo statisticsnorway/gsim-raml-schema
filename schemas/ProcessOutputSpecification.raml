@@ -1,9 +1,11 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   ProcessOutputSpecification:
+    (Doc.objectGsimGroup): BUSINESS
     description: A record of the types of outputs required for a Process Design.
     displayName: Process output specification
     type: IdentifiableArtefact.IdentifiableArtefact

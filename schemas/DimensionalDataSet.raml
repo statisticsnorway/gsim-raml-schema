@@ -1,11 +1,13 @@
 #%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   DataSet: ./abstract/DataSet.raml
 
 types:
   DimensionalDataSet:
+    (Doc.objectGsimGroup): STRUCTURE
     description: A collection of dimensional data that conforms to a known structure.
     displayName: Dimensional data set
     type: [ IdentifiableArtefact.IdentifiableArtefact, DataSet.DataSet ]

@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
   Assessment:
+    (Doc.objectGsimGroup): BUSINESS
     description: The result of the analysis of the quality and effectiveness of any activity undertaken by a statistical organization and recommendations on how these can be improved.
     displayName: Assessment
     type: IdentifiableArtefact.IdentifiableArtefact

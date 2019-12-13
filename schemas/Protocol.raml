@@ -1,9 +1,11 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   Protocol:
+    (Doc.objectGsimGroup): EXCHANGE
     description: The mechanism for exchanging information through an Exchange Channel.
     displayName: Protocol
     type: IdentifiableArtefact.IdentifiableArtefact

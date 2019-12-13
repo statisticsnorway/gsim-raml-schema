@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ProcessOutput: ./abstract/ProcessOutput.raml
 
 types:
   ProcessExecutionLog:
+    (Doc.objectGsimGroup): BUSINESS
     description: The Process Execution Log captures the output of a Process Step which is not directly related to the Transformed Output it produced. It may include data that was recorded during the real time execution of the Process Step.
     displayName: Process execution log
     type: [ IdentifiableArtefact.IdentifiableArtefact, ProcessOutput.ProcessOutput ]
@@ -40,7 +42,7 @@ types:
         description: The human readable message for the event that occurred during the process execution.
         displayName: Log message
 
-      logSeverity?: 
+      logSeverity?:
         type: string
         description: The severity for the event that occurred during the process execution.
         displayName: Log severity

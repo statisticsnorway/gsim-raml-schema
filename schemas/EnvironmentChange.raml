@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   StatisticalNeed: ./abstract/StatisticalNeed.raml
 
 types:
   EnvironmentChange:
+    (Doc.objectGsimGroup): BUSINESS
     description: A requirement for change  that originates from a change in the operating environment of the statistical organization.
     displayName: Environment change
     type: [ IdentifiableArtefact.IdentifiableArtefact, StatisticalNeed.StatisticalNeed ]

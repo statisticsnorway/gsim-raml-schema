@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   Concept: ./abstract/Concept.raml
 
 types:
   Population:
+    (Doc.objectGsimGroup): CONCEPT
     description: The total membership of a defined class of people, objects or events.
     displayName: Population
     type: [ IdentifiableArtefact.IdentifiableArtefact, Concept.Concept ]

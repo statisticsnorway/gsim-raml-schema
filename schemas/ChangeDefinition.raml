@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   ChangeDefinition:
+    (Doc.objectGsimGroup): BUSINESS
     description: A structured, well-defined specification for a proposed change.
     displayName: Change definition
     type: IdentifiableArtefact.IdentifiableArtefact
@@ -15,4 +17,4 @@ types:
         displayName: Populations
         (Link.types): [Population]
 
-    #TODO: Why link only to Population ? Must consider more links here. 
+    #TODO: Why link only to Population ? Must consider more links here.

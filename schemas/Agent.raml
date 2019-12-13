@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   AgentDetails: ./abstract/AgentDetails.raml
 
 types:
   Agent:
+    (Doc.objectGsimGroup): BASE
     description: An actor that performs a role in relation to the statistical Business Process.
     displayName: Agent
     type: IdentifiableArtefact.IdentifiableArtefact

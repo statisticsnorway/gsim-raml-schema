@@ -1,10 +1,12 @@
 #%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   Presentation:
+    (Doc.objectGsimGroup): EXCHANGE
     description: The way data and referential metadata are presented in a Product.
     displayName: Presentation
     type: IdentifiableArtefact.IdentifiableArtefact

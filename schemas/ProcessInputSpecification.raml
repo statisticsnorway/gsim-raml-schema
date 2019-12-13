@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   # ProcessInput: ./abstract/ProcessInput.raml
 
 types:
   ProcessInputSpecification:
+    (Doc.objectGsimGroup): BUSINESS
     description: A record of the types of inputs required for a Process Design.
     displayName: Process input specification
     type: IdentifiableArtefact.IdentifiableArtefact

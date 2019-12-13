@@ -1,9 +1,11 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   Role:
+    (Doc.objectGsimGroup): BASE
     description: The responsible function involved in the statistical Business Process.
     displayName: Role
     type: IdentifiableArtefact.IdentifiableArtefact

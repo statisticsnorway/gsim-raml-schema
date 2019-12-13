@@ -1,9 +1,11 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   ProcessPattern:
+    (Doc.objectGsimGroup): BUSINESS
     description: A nominated set of Process  Designs, and associated Process Control Designs (flow), which have been highlighted for possible reuse.
     displayName: Process pattern
     type: IdentifiableArtefact.IdentifiableArtefact

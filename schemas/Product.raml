@@ -1,11 +1,13 @@
 #%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ExchangeChannel: ./abstract/ExchangeChannel.raml
 
 types:
   Product:
+    (Doc.objectGsimGroup): EXCHANGE
     description: A package of content that can be disseminated as a whole.
     displayName: Product
     type: [ IdentifiableArtefact.IdentifiableArtefact, ExchangeChannel.ExchangeChannel ]

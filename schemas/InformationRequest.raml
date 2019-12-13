@@ -1,12 +1,14 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   StatisticalNeed: ./abstract/StatisticalNeed.raml
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
   InformationRequest:
+    (Doc.objectGsimGroup): BUSINESS
     description: An outline of a need for new information required for a particular purpose.
     displayName: Information request
     type: [ IdentifiableArtefact.IdentifiableArtefact, StatisticalNeed.StatisticalNeed ]

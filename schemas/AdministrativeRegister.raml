@@ -1,11 +1,13 @@
 #%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ExchangeChannel: ./abstract/ExchangeChannel.raml
 
 types:
   AdministrativeRegister:
+    (Doc.objectGsimGroup): EXCHANGE
     description: A source of administrative information which is obtained from an external organisation (or sometimes from another department of the same organisation)
     displayName: Administrative Register
     type: [ IdentifiableArtefact.IdentifiableArtefact, ExchangeChannel.ExchangeChannel ]

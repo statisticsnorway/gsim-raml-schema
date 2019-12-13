@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ProcessInput: ./abstract/ProcessInput.raml
 
 types:
   ParameterInput:
+    (Doc.objectGsimGroup): BUSINESS
     description: Inputs used to specify which configuration should be used for a specific Process Step which has been designed to be configurable.
     displayName: Parameter input
     type: [ IdentifiableArtefact.IdentifiableArtefact, ProcessInput.ProcessInput ]

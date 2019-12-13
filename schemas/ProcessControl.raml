@@ -1,9 +1,11 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   ProcessControl:
+    (Doc.objectGsimGroup): BUSINESS
     description: A set of decision points which determine the flow between the Process Steps used to perform a Business Process.
     displayName: Process control
     type: IdentifiableArtefact.IdentifiableArtefact

@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   RepresentedVariable:
+    (Doc.objectGsimGroup): CONCEPT
     description: A combination of a characteristic of a population to be measured and how that measure will be represented.
     displayName: Represendted variable
     type: IdentifiableArtefact.IdentifiableArtefact

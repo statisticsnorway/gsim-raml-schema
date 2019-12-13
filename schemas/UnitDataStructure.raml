@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   DataStructure: ./abstract/DataStructure.raml
 
 types:
   UnitDataStructure:
+    (Doc.objectGsimGroup): STRUCTURE
     description: Describes the structure of a Unit Data Set.
     displayName: Unit data structure
     type: [ IdentifiableArtefact.IdentifiableArtefact, DataStructure.DataStructure ]

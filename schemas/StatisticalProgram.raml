@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
   StatisticalProgram:
+    (Doc.objectGsimGroup): BUSINESS
     description: A set of activities, which may be repeated, to investigate characteristics of a given Population. It describes the purpose and context of a set of Business Process within the context of the relevant Statistical Program Cycles.
     displayName: Statistical program
     type: IdentifiableArtefact.IdentifiableArtefact

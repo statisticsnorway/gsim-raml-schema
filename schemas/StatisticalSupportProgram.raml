@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
   StatisticalSupportProgram:
+    (Doc.objectGsimGroup): BUSINESS
     description: A program which is not related to the post-design cyclic production of statistical products, but is necessary to support cyclical production.
     displayName: Statistical support program
     type: IdentifiableArtefact.IdentifiableArtefact
@@ -21,7 +23,7 @@ types:
         displayName: Statistical needs
         (Link.types): [EnvironmentChange, InformationRequest]
 
-      changeDefinitions?: 
+      changeDefinitions?:
         type: string[]
         displayName: Change definitions
         (Link.types): [ChangeDefinition]

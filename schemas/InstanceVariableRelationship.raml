@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   InstanceVariableRelationship:
+    (Doc.objectGsimGroup): STRUCTURE
     description: This reflects that there could be a structure within the Logical Record and Data Structure, for example several fields can together represent a structured field (e.g. an address), or the record can be structured as in the case of an XML file conformant to a schema. Another example is the relationship between attributes (source, quality, ..) and measures.
     displayName: Component relationship
     type: IdentifiableArtefact.IdentifiableArtefact

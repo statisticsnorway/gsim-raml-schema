@@ -1,16 +1,18 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   StatisticalProgramCycle:
+    (Doc.objectGsimGroup): BUSINESS
     description: A set of activities to investigate characteristics of a given Population for a particular reference period.
     displayName: Statistical program cycle
     type: IdentifiableArtefact.IdentifiableArtefact
 
     properties:
-      businessProcesses?: 
+      businessProcesses?:
         type: string[]
         displayName: Business processes
         (Link.types): [BusinessProcess]

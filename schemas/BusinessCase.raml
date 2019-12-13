@@ -1,11 +1,13 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
   BusinessCase:
+    (Doc.objectGsimGroup): BUSINESS
     description: A proposal for a body of work that will deliver outputs designed to achieve outcomes. A Business Case will provide the reasoning for undertaking a Statistical Support Program to initiate a new Statistical Program Design for an existing Statistical Program, or an entirely new Statistical Program, as well as the details of the change proposed.
     displayName: Business case
     type: IdentifiableArtefact.IdentifiableArtefact
@@ -34,7 +36,7 @@ types:
             - NEW           # New program
             - PERMANENT     # Permanent (indefinite) change to existing program
             - TEMPORARY     # Temporary change to existing program
-            - CEASE         # Cease program 
+            - CEASE         # Cease program
 
       objective:
         type: MultilingualText.MultilingualText[]

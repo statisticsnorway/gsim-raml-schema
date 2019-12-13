@@ -1,11 +1,13 @@
 #%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ExchangeChannel: ./abstract/ExchangeChannel.raml
 
 types:
   DataHarvesting:
+    (Doc.objectGsimGroup): EXCHANGE
     description: A concrete and usable tool to gather information from the Internet.
     displayName: DataHarvesting
     type: [ IdentifiableArtefact.IdentifiableArtefact, ExchangeChannel.ExchangeChannel ]

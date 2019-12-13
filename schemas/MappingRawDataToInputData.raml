@@ -1,12 +1,14 @@
 ﻿#%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
+  Doc: ./annotation/Doc.raml
 
 types:
   # COMMENT:
   # This object is not part of GSIM. This object is a GSIM extension (plugin)
   # for use in Statistics Norway.
   MappingRawDataToInputData:
+    (Doc.objectGsimGroup): OTHER
     description: Mapping elements from external Raw Data Object Store to Input Data (InstanceVariable).
     displayName: Mapping Raw data to Input data
 

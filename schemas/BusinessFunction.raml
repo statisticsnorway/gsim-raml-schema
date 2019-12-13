@@ -1,9 +1,11 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
   BusinessFunction:
+    (Doc.objectGsimGroup): BUSINESS
     description: Something an enterprise does, or needs to do, in order to achieve its objectives.
     displayName: Business function
     type: IdentifiableArtefact.IdentifiableArtefact

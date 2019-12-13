@@ -1,10 +1,12 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Doc: ./annotation/Doc.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   MultilingualText: ./abstract/MultilingualText.raml
 
 types:
   BusinessService:
+    (Doc.objectGsimGroup): BUSINESS
     description: A means of performing a Business Function (an ability that an organization possesses, typically expressed in general and high level terms and requiring a combination of organization, people, processes and technology to achieve).
     displayName: Business service
     type: IdentifiableArtefact.IdentifiableArtefact
