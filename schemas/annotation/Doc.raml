@@ -1,0 +1,35 @@
+#%RAML 1.0 Library
+# Annotations for extending RAML schema to support detailed documentation of
+# the information model objects and attributes.
+annotationTypes:
+
+  ### RAML schema object documentation annotations ###
+  objectGsimGroup:
+    description: The objects GSIM group
+    type: string
+    enum:
+      - BASE
+      - BUSINESS
+      - CONCEPT
+      - EXCHANGE
+      - STRUCTURE
+      - OTHER
+
+  objectMicroService:
+    description: The microservice the object is a part of
+    type: string
+    enum:
+      - CONCEPT          # GSIM Concepts Group (og litt fra Concept???)
+      - CATALOG          # I hovedsak GSIM Structures Group
+      - NOTEREPO         # TODO Er denne relevant for GSIM?
+      - AUTHORIZATION    # TODO Kan være relevant for Role, Agent og AgentInRole?
+      - PEDIGREE         # TODO Kan være relevant for noen av Business-objektene?
+      - FACTORY          # TODO Kan være relevant for noen av Business-objektene?
+      - BLUEPRINT        # TODO Kan være relevant for noen av Business-objektene?
+      - OTHER
+
+
+  ### RAML schema attribute documentation annotations ###
+  attributeUriDetailedDoc:
+    description: Reference (uri) to external detailed documentation of the attribute. E.g. an ENUN described in an external classification or code list.
+    type: string
