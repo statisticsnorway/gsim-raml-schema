@@ -35,7 +35,7 @@ types:
 ### Annotations
 This is maintained in the folder `/schemas/annotation/`
 
-Attributes can link to other objects, and this is done by using annotations.
+#### Attributes can link to other objects, and this is done by using annotations.
 
 ```Link
 #%RAML 1.0 Library
@@ -46,6 +46,60 @@ annotationTypes:
     description: Holds the type of objects a link points to
 ```
 
+#### Annotations for extending RAML schema to support detailed documentation of the information model objects and attributes.
+
+```Doc
+%RAML 1.0 Library
+annotationTypes:
+
+  objectGsimGroup:
+    description: The objects GSIM group
+    type: string
+    enum:
+      - BASE
+      - BUSINESS
+      - CONCEPT
+      - EXCHANGE
+      - STRUCTURE
+      - OTHER
+
+  objectMicroService:
+    description: The microservice the object is a part of
+    type: string
+    enum:
+      - CONCEPT
+      - CATALOG
+      - PEDIGREE
+      - FACTORY
+      - BLUEPRINT
+      - OTHER
+
+  attributeUriDetailedDoc:
+    description: Reference (uri) to external detailed documentation of the attribute. E.g. an ENUN described in an external classification or code list.
+    type: string
+
+```
+
+Doc annotation example
+```RAML
+#%RAML 1.0 Library
+uses:
+  Doc: ./annotation/Doc.raml
+
+types:
+  UnitDataSet:
+    (Doc.objectGsimGroup): STRUCTURE
+    (Doc.objectMicroService): CATALOG
+    description: A collection of data that conforms to a known structure and describes aspects of one or more Units.
+    displayName: Unit data set
+    ...
+
+    properties:
+      unitDataStructure:
+        type: string
+        displayName: Unit data structure
+      ...
+```
 
 ## Linked Domain
 
@@ -103,7 +157,6 @@ to both IdentifierComponent and MeasureComponent through the `mandatoryComponent
   ]
 }  
 ```
-
 
 # Implementation roadmap
 
