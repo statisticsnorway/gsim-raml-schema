@@ -19,8 +19,9 @@ annotationTypes:
     description: The microservice the object is a part of
     type: string
     enum:
-      - CONCEPT          # GSIM Concepts Group (og litt fra Concept???)
-      - CATALOG          # I hovedsak GSIM Structures Group
+      - CONCEPT          # Mainly objects from GSIM Concepts Group
+      - CATALOG          # Mainly objects from GSIM Structures Group
+      - VARIABLEREPO     # The InstanceVariable-object and objects directly linked to it 
       - NOTEREPO         # TODO Er denne relevant for GSIM?
       - AUTHORIZATION    # TODO Kan være relevant for Role, Agent og AgentInRole?
       - PEDIGREE         # TODO Kan være relevant for noen av Business-objektene?
