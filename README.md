@@ -283,3 +283,6 @@ Example:
 KLASS (Statistics Norways system for classifications and Codelists) is also based on GSIM, and will hopefully in the future be a part of the RAML spesifications of this project.
 
 See KLASS on Github: https://github.com/statisticsnorway/klass
+
+# Local setup and schema addition
+In order to setup a local LDS server with GSIM schemas and browse existetnt data stuctures follow steps listed on Wiki https://github.com/statisticsnorway/gsim-raml-schema/wiki
