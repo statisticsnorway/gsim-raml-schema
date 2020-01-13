@@ -2,6 +2,7 @@
 uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ValueDomain: ./abstract/ValueDomain.raml
+  RankedKlassUrnDetails: ./abstract/RankedKlassUrnDetails.raml
 
 types:
   EnumeratedValueDomain:
@@ -10,8 +11,8 @@ types:
     type: [ IdentifiableArtefact.IdentifiableArtefact, ValueDomain.ValueDomain ]
 
     properties:
-      klassUrl:
-        type: string
+      rankedList:
+        type: RankedKlassUrnDetails.RankedKlassUrnDetails[]
         description: The url to KLASS codelist.
         displayName: Klass url
 

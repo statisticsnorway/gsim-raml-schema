@@ -1,0 +1,15 @@
+#%RAML 1.0 Library
+
+types:
+ RankedKlassUrnDetails:
+    description: A URN with rank property
+    type: 
+    properties:
+      rank: 
+        type: integer
+        description: Position in the list
+        displayName: Position in the list
+      klassUrn:
+        type: string
+        description: The urn to KLASS data
+        displayName: Klass code url
