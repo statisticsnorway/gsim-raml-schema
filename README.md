@@ -231,7 +231,7 @@ Business|TransformedOutput|![usable](http://progressed.io/bar/50)|
 Objects in Concepts group regarding classifications and codelists has not yet been addressed in RAML due to the use of an existing system for this in Statistics Norway  (https://www.ssb.no/en/klass/).
 
 In `EnumeratedVariableDomain` there is an attribute that links to this system:
-```KlassUrl
+```KlassUrn
 #%RAML 1.0 Library
 uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
@@ -243,10 +243,10 @@ types:
     type: [IdentifiableArtefact.IdentifiableArtefact, ValueDomain.ValueDomain]
 
     properties:
-      klassUrl:
+      klassUrn:
         type: string
-        description: The url to KLASS (Statistics Norways system for Classifications and Codelists).
-        displayName: Klass Url
+        description: The urn to KLASS (Statistics Norways system for Classifications and Codelists).
+        displayName: Klass Urn
 
 ```
 
@@ -274,7 +274,7 @@ Example:
     "createdDate": "2006-01-01T00:00:00.000Z",
     "createdBy": "OHV",
     "dataType": "STRING",
-    "klassUrl": "https://www.ssb.no/en/klass/klassifikasjoner/17"
+    "klassUrn": "klass:klassifikasjoner:17"
 }
 
 ```
