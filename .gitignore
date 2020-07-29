@@ -1,6 +1,7 @@
 /.idea
 *.iml
 /test/
+/graphqlschemas/
 /jsonschemas/
 *.DS_Store
 /docker/
