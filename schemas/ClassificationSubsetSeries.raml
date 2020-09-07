@@ -1,0 +1,16 @@
+#%RAML 1.0 Library
+uses:
+  Link: ./annotation/Link.raml
+  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
+  
+types:
+  ClassificationSubsetSeries:
+    description: A subset of classifications
+    displayName: Classification subset series
+    type: [ IdentifiableArtefact.IdentifiableArtefact ]
+
+    properties:
+      classificationSubsetVersions?:
+        type: string[]
+        displayName: Classification subset versions
+        (Link.types): [ClassificationSubsetVersion]
