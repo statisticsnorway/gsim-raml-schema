@@ -32,6 +32,16 @@ types:
             - MEASURE
             - ATTRIBUTE
 
+      temporalityType?:
+          type: string
+          description: Instance variable temporality type
+          displayName: Temporality type
+          enum:
+            - EVENT
+            - STATUS
+            - ACCUMULATED
+            - FIXED
+
       sentinelValueDomain?:
         type: string
         displayName: Sentinel value domain
