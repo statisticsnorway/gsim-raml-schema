@@ -29,6 +29,14 @@ types:
           - INTERNAL   # 3
           - OPEN       # 4
 
+      temporalityType?:
+        type: string
+        description: Dataset temporality
+        displayName: Temporality type
+        enum:
+          - EVENT
+          - STATUS
+
       dataExistsFromDate?:
         type: datetime
         description: The date on which data is effective or valid.
