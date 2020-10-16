@@ -1,0 +1,68 @@
+#%RAML 1.0 Library
+uses:
+  Link: ../annotation/Link.raml
+  MultilingualText: MultilingualText.raml
+  AdministrativeDetails: AdministrativeDetails.raml
+
+types:
+  ClassificationItem:
+    description: An element of a classification items list or a code list.
+    displayName: Classification item
+
+    properties:
+      id:
+        type: string
+        description: The global unique identifier (GUID) of the information object assigned by the owner agency.
+        displayName: Id
+
+      code:
+        type: string
+        description: A combination of number and letters, unique for a classification version. (Avoid special characters not supported as variable names in common programming languages).
+        displayName: Code
+
+      name:
+        type: MultilingualText.MultilingualText[]
+        description: The name of the code.
+        displayName: Name
+
+      description?:
+        type: MultilingualText.MultilingualText[]
+        description: The description of the information object.
+        displayName: Description
+
+      shortName?:
+        type: string
+        description: A short technical name. (Avoid special characters not supported as variable names in common programming languages).
+        displayName: Short name
+
+      administrativeStatus?:
+        type: string
+        description: Indicator for access to an item.
+        displayName: Administrative status
+        enum:
+          - DRAFT
+          - INTERNAL
+          - OPEN
+          - DEPRECATED
+
+      parentCode?:
+        type: string
+        description: A reference to the parent code in structured code lists.
+        displayName: Parent code
+        # TODO: link to a code
+
+      level?:
+        type: integer
+        description: A level (depth) counter for the code in structured code lists.
+        displayName: Level
+
+      notes?:
+        type: MultilingualText.MultilingualText[]
+        description: A reference to a note for a version note
+        displayName: Notes
+        # TODO: link to a version
+
+      administrativeDetails?:
+        type: AdministrativeDetails.AdministrativeDetails[]
+        description: Administrative details (e.g. default language, documentation, localID, ...).
+        displayName: Administrative details

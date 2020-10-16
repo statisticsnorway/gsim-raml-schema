@@ -1,16 +1,90 @@
 #%RAML 1.0 Library
 uses:
   Link: ./annotation/Link.raml
-  IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
-  
+  MultilingualText: ./abstract/MultilingualText.raml
+  AdministrativeDetails: ./abstract/AdministrativeDetails.raml
+  Division: ./Division.raml
+  StatisticalUnnit: ./StatisticalUnit.raml
+  ClassificationSubsetVersion: ./ClassificationSubsetVersion.raml
+
 types:
   ClassificationSubsetSeries:
     description: A subset of classifications
     displayName: Classification subset series
-    type: [ IdentifiableArtefact.IdentifiableArtefact ]
+    type: [ Division.Division, StatisticalUnnit.StatisticalUnnit, ClassificationSubsetVersion.ClassificationSubsetVersion, MultilingualText.MultilingualText, AdministrativeDetails.AdministrativeDetails ]
 
     properties:
-      classificationSubsetVersions?:
+      id:
+        type: string
+        description: The global unique identifier (GUID) of the information object assigned by the owner agency.
+        displayName: Id
+
+      name:
+        type: MultilingualText.MultilingualText[]
+        description: A term which designates a concept, in this case an information object. The identifying name will be the preferred designation. There will be many terms to designate the same information object, such as synonyms and terms in other languages.
+        displayName: Name
+
+      description?:
+        type: MultilingualText.MultilingualText[]
+        description: The description of the information object
+        displayName: Description
+
+      shortName?:
+        type: string
+        description: A short technical name. (Avoid special characters not supported as variable names in common programming languages).
+        displayName: Short name
+
+      createdDate:
+        type: datetime
+        description: The date on which the information object was created
+        displayName: Created date
+
+      createdBy:
+        type: string
+        description: Information object created by.
+        displayName: Created by
+        #TODO: link to Agent (id/guid)!
+
+      owner:
+        type: string
+        description: Statistics Norway Division responsible for the subset updates.
+        displayName: Staistical units
+        #TODO: link to Division (id/guid)!
+
+      statisticalUntis:
         type: string[]
-        displayName: Classification subset versions
-        (Link.types): [ClassificationSubsetVersion]
+        description: Statistical unit references a subset tagged with.
+        displayName: Staistical units
+        #TODO: link to statisticalUnit (id/guid)!
+
+      versions:
+        type: ClassificationSubsetVersion[]
+        description: Versions of the classification code set for different validity periods.
+        displayName: Versions
+
+      versionRationale?:
+        type: MultilingualText.MultilingualText[]
+        description: The reason for making this version of the information object.
+        displayName: Version rationale
+
+      lastUpdatedDate?:
+        type: datetime
+        description: The date on which the object was last updated.
+        displayName: Last updated date
+
+      lastUpdatedBy?:
+        type: string
+        description: Last updated by.
+        displayName: Last updated by
+        #TODO: link to Agent (id/guid)!
+
+      administrativeDetails?:
+        type: AdministrativeDetails.AdministrativeDetails[]
+        description: Administrative details (e.g. default language, documentation, localID, ...).
+        displayName: Administrative details
+
+      agentInRoles?:
+        type: string[]
+        description: Agent(s) acting in the Role(s) for this information object.
+        displayName: Agent in roles
+        (Link.types): [ AgentInRole ]

@@ -1,0 +1,31 @@
+#%RAML 1.0 Library
+uses:
+  ClassificationItem: ../abstract/ClassificationItem.raml
+  RankedUrnDetails: ../abstract/RankedUrnDetails.raml
+
+types:
+  ClassificationSubsetCode:
+    description: A code reference in a subset of classifications
+    displayName: Classification code
+    type: [ ClassificationItem.ClassificationItem ]
+
+    properties:
+      classificationId:
+        type: string
+        description: An id to a classification or code list
+        displayName: Codes
+
+      classificationVersionId:
+        type: string
+        description: A classification version IDs, which includes the code
+        displayName: Classifiscation version
+
+      rank:
+        type: integer
+        description: Position in the list
+        displayName: Position in the list
+
+      urn:
+        type: string
+        description: An URN
+        displayName: Resource urn
