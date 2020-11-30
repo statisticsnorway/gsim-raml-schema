@@ -2,19 +2,27 @@
 uses:
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
-  ClassificationCode: ./abstract/ClassificationSubsetCode.raml
+  ClassificationSubsetCode: ./abstract/ClassificationSubsetCode.raml
+  AgentInRole: ./AgentInRole.raml
+  ContactInfo: ./ContactInfo.raml
+  Link: ./annotation/Link.raml
 
 types:
   ClassificationSubsetVersion:
     description: A subset of classifications
     displayName: Classification subset
-    type: [ ClassificationSubsetCode.ClassificationSubsetCode, MultilingualText.MultilingualText, AdministrativeDetails.AdministrativeDetails ]
+    type: [ ContactInfo.ContactInfo, AgentInRole.AgentInRole, ClassificationSubsetCode.ClassificationSubsetCode, MultilingualText.MultilingualText, AdministrativeDetails.AdministrativeDetails ]
 
     properties:
-      id:
+      versionId:
         type: string
-        description: The global unique identifier (GUID) of the information object assigned by the owner agency.
-        displayName: Id
+        description: unique id of this version of this subset
+        displayName: Version ID
+
+      subsetId:
+        type: string
+        description: The global unique identifier (GUID) of the subset series this version belongs to
+        displayName: Subset ID
 
       name:
         type: MultilingualText.MultilingualText[]
@@ -46,27 +54,20 @@ types:
         description: The date on which the information object was created
         displayName: Created date
 
-      createdBy:
-        type: string
-        description: Information object created by.
-        displayName: Created by
-        #TODO: link to Agent (id/guid)!
-
       versionRationale?:
         type: MultilingualText.MultilingualText[]
         description: The reason for making this version of the information object.
         displayName: Version rationale
 
-      lastUpdatedDate?:
+      lastModified:
         type: datetime
         description: The date on which the object was last updated.
-        displayName: Last updated date
+        displayName: Last modified date time
 
-      lastUpdatedBy?:
-        type: string
-        description: Last updated by.
+      lastModifiedBy?:
+        type: ContactInfo
+        description: Last updated by
         displayName: Last updated by
-        #TODO: link to Agent (id/guid)!
 
       validFrom:
         type: datetime

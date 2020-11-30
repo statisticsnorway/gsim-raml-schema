@@ -3,17 +3,25 @@ uses:
   Link: ./annotation/Link.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
-  Division: ./Division.raml
-  StatisticalUnnit: ./StatisticalUnit.raml
   ClassificationSubsetVersion: ./ClassificationSubsetVersion.raml
 
 types:
   ClassificationSubsetSeries:
     description: A subset of classifications
     displayName: Classification subset series
-    type: [ Division.Division, StatisticalUnnit.StatisticalUnnit, ClassificationSubsetVersion.ClassificationSubsetVersion, MultilingualText.MultilingualText, AdministrativeDetails.AdministrativeDetails ]
+    type: [ ContactInfo.ContactInfo, ClassificationSubsetVersion.ClassificationSubsetVersion, MultilingualText.MultilingualText, AdministrativeDetails.AdministrativeDetails ]
 
     properties:
+      classificationType:
+        type: string
+        description: What type of classificaiton is this? Always 'Subset' if present
+        displayName: classification type
+
+      contactPerson:
+        type: ContactInfo
+        description: Contact info to the person responsible for this subset
+        displayName: Contact information
+
       id:
         type: string
         description: The global unique identifier (GUID) of the information object assigned by the owner agency.
@@ -39,16 +47,10 @@ types:
         description: The date on which the information object was created
         displayName: Created date
 
-      createdBy:
-        type: string
-        description: Information object created by.
-        displayName: Created by
-        #TODO: link to Agent (id/guid)!
-
-      owner:
+      owningSection:
         type: string
         description: Statistics Norway Division responsible for the subset updates.
-        displayName: Staistical units
+        displayName: Owning section
         #TODO: link to Division (id/guid)!
 
       statisticalUnits:
@@ -67,16 +69,15 @@ types:
         description: The reason for making this version of the information object.
         displayName: Version rationale
 
-      lastUpdatedDate?:
+      lastModified:
         type: datetime
         description: The date on which the object was last updated.
-        displayName: Last updated date
+        displayName: Last modified date time
 
-      lastUpdatedBy?:
-        type: string
-        description: Last updated by.
+      lastModifiedBy?:
+        type: ContactInfo
+        description: Last updated by
         displayName: Last updated by
-        #TODO: link to Agent (id/guid)!
 
       administrativeDetails?:
         type: AdministrativeDetails.AdministrativeDetails[]
