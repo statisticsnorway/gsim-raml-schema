@@ -13,7 +13,7 @@ types:
     properties:
       classificationType?:
         type: string
-        description: What type of classificaiton is this? Always 'Subset' if present
+        description: What type of classificaiton is this? Always Subset if present
         displayName: classification type
 
       contactPerson?:
@@ -59,9 +59,10 @@ types:
         #TODO: link to statisticalUnit (id/guid)?
 
       versions:
-        type: ClassificationSubsetVersion.ClassificationSubsetVersion[]
+        type: string[]
         description: Versions of the classification code set for different validity periods.
         displayName: Versions
+        (Link.types): [ ClassificationSubsetVersion ]
 
       versionRationale?:
         type: MultilingualText.MultilingualText[]
