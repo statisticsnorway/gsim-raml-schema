@@ -3,22 +3,21 @@ uses:
   Link: ./annotation/Link.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
+  ContactInfo: ./ContactInfo.raml
   ClassificationSubsetVersion: ./ClassificationSubsetVersion.raml
 
 types:
   ClassificationSubsetSeries:
     description: A subset of classifications
     displayName: Classification subset series
-    type: [ ContactInfo.ContactInfo, ClassificationSubsetVersion.ClassificationSubsetVersion, MultilingualText.MultilingualText, AdministrativeDetails.AdministrativeDetails ]
-
     properties:
-      classificationType:
+      classificationType?:
         type: string
         description: What type of classificaiton is this? Always 'Subset' if present
         displayName: classification type
 
-      contactPerson:
-        type: ContactInfo
+      contactPerson?:
+        type: ContactInfo.ContactInfo
         description: Contact info to the person responsible for this subset
         displayName: Contact information
 
@@ -51,13 +50,13 @@ types:
         type: string
         description: Statistics Norway Division responsible for the subset updates.
         displayName: Owning section
-        #TODO: link to Division (id/guid)!
+        #TODO: link to Division (id/guid)?
 
-      statisticalUnits:
+      statisticalUnits?:
         type: string[]
         description: Statistical unit references a subset tagged with.
         displayName: Staistical units
-        #TODO: link to statisticalUnit (id/guid)!
+        #TODO: link to statisticalUnit (id/guid)?
 
       versions:
         type: ClassificationSubsetVersion[]
@@ -75,7 +74,7 @@ types:
         displayName: Last modified date time
 
       lastModifiedBy?:
-        type: ContactInfo
+        type: ContactInfo.ContactInfo
         description: Last updated by
         displayName: Last updated by
 

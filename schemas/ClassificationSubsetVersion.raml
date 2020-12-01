@@ -1,18 +1,16 @@
 #%RAML 1.0 Library
 uses:
+  Link: ./annotation/Link.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
+  ContactInfo: ./ContactInfo.raml
   ClassificationSubsetCode: ./ClassificationSubsetCode.raml
   AgentInRole: ./AgentInRole.raml
-  ContactInfo: ./ContactInfo.raml
-  Link: ./annotation/Link.raml
 
 types:
   ClassificationSubsetVersion:
     description: A subset of classifications
     displayName: Classification subset
-    type: [ ContactInfo.ContactInfo, AgentInRole.AgentInRole, ClassificationSubsetCode.ClassificationSubsetCode, MultilingualText.MultilingualText, AdministrativeDetails.AdministrativeDetails ]
-
     properties:
       versionId:
         type: string
@@ -65,7 +63,7 @@ types:
         displayName: Last modified date time
 
       lastModifiedBy?:
-        type: ContactInfo
+        type: ContactInfo.ContactInfo
         description: Last updated by
         displayName: Last updated by
 
