@@ -3,7 +3,7 @@ uses:
   Link: ./annotation/Link.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
-  ContactInfo: ./abstract/ContactInfo.raml
+  ContactInformation: ./abstract/ContactInformation.raml
   ClassificationSubsetCode: ./abstract/ClassificationSubsetCode.raml
   AgentInRole: ./AgentInRole.raml
 
@@ -68,7 +68,7 @@ types:
         type: string[]
         description: Last updated by
         displayName: Last updated by
-        (Link.types): [ ContactInfo ]
+        (Link.types): [ ContactInformation ]
 
       validFrom:
         type: datetime

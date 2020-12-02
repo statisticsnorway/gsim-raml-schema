@@ -3,7 +3,7 @@ uses:
   Link: ./annotation/Link.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
-  ContactInfo: ./abstract/ContactInfo.raml
+  ContactInformation: ./abstract/ContactInformation.raml
   ClassificationSubsetVersion: ./ClassificationSubsetVersion.raml
 
 types:
@@ -17,12 +17,6 @@ types:
         type: string
         description: What kind of classificaiton this is (Always Subset if present)
         displayName: Kind of classification
-
-      contactPerson?:
-        type: string[]
-        description: Contact info to the person responsible for this subset
-        displayName: Contact information
-        (Link.types): [ ContactInfo ]
 
       id:
         type: string
@@ -81,7 +75,12 @@ types:
         type: string[]
         description: Last updated by
         displayName: Last updated by
-        (Link.types): [ ContactInfo ]
+        (Link.types): [ ContactInformation ]
+
+      contactPerson?:
+        type: ContactInformation.ContactInformation
+        description: Contact info to the person responsible for this subset
+        displayName: Contact information
 
       administrativeDetails?:
         type: AdministrativeDetails.AdministrativeDetails[]
