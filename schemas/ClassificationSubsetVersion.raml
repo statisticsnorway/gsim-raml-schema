@@ -3,14 +3,16 @@ uses:
   Link: ./annotation/Link.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
-  ContactInfo: ./ContactInfo.raml
-  ClassificationSubsetCode: ./ClassificationSubsetCode.raml
+  ContactInfo: ./abstract/ContactInfo.raml
+  ClassificationSubsetCode: ./abstract/ClassificationSubsetCode.raml
   AgentInRole: ./AgentInRole.raml
 
 types:
   ClassificationSubsetVersion:
     description: A subset of classifications
     displayName: Classification subset
+    type: object
+
     properties:
       versionId:
         type: string
@@ -63,9 +65,10 @@ types:
         displayName: Last modified date time
 
       lastModifiedBy?:
-        type: ContactInfo.ContactInfo
+        type: string[]
         description: Last updated by
         displayName: Last updated by
+        (Link.types): [ ContactInfo ]
 
       validFrom:
         type: datetime
@@ -81,12 +84,6 @@ types:
         type: AdministrativeDetails.AdministrativeDetails[]
         description: Administrative details (e.g. default language, documentation, localID, ...).
         displayName: Administrative details
-
-      agentInRoles?:
-        type: string[]
-        description: Agent(s) acting in the Role(s) for this information object.
-        displayName: Agent in roles
-        (Link.types): [ AgentInRole ]
 
       codes:
         type: ClassificationSubsetCode.ClassificationSubsetCode[]

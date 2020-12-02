@@ -3,13 +3,15 @@ uses:
   Link: ./annotation/Link.raml
   MultilingualText: ./abstract/MultilingualText.raml
   AdministrativeDetails: ./abstract/AdministrativeDetails.raml
-  ContactInfo: ./ContactInfo.raml
+  ContactInfo: ./abstract/ContactInfo.raml
   ClassificationSubsetVersion: ./ClassificationSubsetVersion.raml
 
 types:
   ClassificationSubsetSeries:
     description: A subset of classifications
     displayName: Classification subset series
+    type: object
+
     properties:
       classificationType?:
         type: string
@@ -17,9 +19,10 @@ types:
         displayName: Kind of classification
 
       contactPerson?:
-        type: ContactInfo.ContactInfo
+        type: string[]
         description: Contact info to the person responsible for this subset
         displayName: Contact information
+        (Link.types): [ ContactInfo ]
 
       id:
         type: string
@@ -75,17 +78,12 @@ types:
         displayName: Last modified date time
 
       lastModifiedBy?:
-        type: ContactInfo.ContactInfo
+        type: string[]
         description: Last updated by
         displayName: Last updated by
+        (Link.types): [ ContactInfo ]
 
       administrativeDetails?:
         type: AdministrativeDetails.AdministrativeDetails[]
         description: Administrative details (e.g. default language, documentation, localID, ...).
         displayName: Administrative details
-
-      agentInRoles?:
-        type: string[]
-        description: Agent(s) acting in the Role(s) for this information object.
-        displayName: Agent in roles
-        (Link.types): [ AgentInRole ]
