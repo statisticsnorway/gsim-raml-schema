@@ -72,13 +72,12 @@ types:
         displayName: Last modified date time
 
       lastModifiedBy?:
-        type: string[]
+        type: ContactInformation.ContactInformation[]
         description: Last updated by
         displayName: Last updated by
-        (Link.types): [ ContactInformation ]
 
       contactPerson?:
-        type: ContactInformation.ContactInformation
+        type: ContactInformation.ContactInformation[]
         description: Contact info to the person responsible for this subset
         displayName: Contact information
 
