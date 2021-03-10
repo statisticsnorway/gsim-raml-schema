@@ -9,5 +9,8 @@ types:
     type: IdentifiableArtefact.IdentifiableArtefact
 
     properties:
-
+      parentSubjectField?:
+        type: string
+        displayName: Parent subject field
+        (Link.types): [SubjectField]
     example: !include ../examples/_main/SubjectField_IncomeAndWealth.json

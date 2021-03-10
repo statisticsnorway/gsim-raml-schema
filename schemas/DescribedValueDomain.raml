@@ -10,6 +10,11 @@ types:
     type: [ IdentifiableArtefact.IdentifiableArtefact, ValueDomain.ValueDomain ]
 
     properties:
+      measurementUnit?:
+        type: string
+        displayName: Measurement unit
+        (Link.types): [MeasurementUnit]
+
       #TODO: Do we need these, or can it be businessrules ?
       minValue?:
         type: number

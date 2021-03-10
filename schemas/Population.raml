@@ -11,13 +11,14 @@ types:
     type: [ IdentifiableArtefact.IdentifiableArtefact, Concept.Concept ]
 
     properties:
-      populationType:
+      populationType?:
         type: string
         description: The type og pupulation.
         displayName: Population type
         enum:
         - TARGET
         - SURVEY
+        - FRAME
 
       referencePeriodStartDate?:
         type: datetime

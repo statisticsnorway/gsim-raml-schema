@@ -10,12 +10,22 @@ types:
     type: IdentifiableArtefact.IdentifiableArtefact
 
     properties:
-      representedVariable:
+      representedVariable?:
         type: string
         displayName: Represented variable
         (Link.types): [RepresentedVariable]
+            
+      valuation?:
+        type: string
+        description: Classification of the value or damage potential of a dataset
+        displayName: Valuation
+        enum:  
+          - SENSITIVE  # 1
+          - SHIELDED   # 2
+          - INTERNAL   # 3
+          - OPEN       # 4
 
-      population:
+      population?:
         type: string
         displayName: Population
         (Link.types): [Population]
@@ -31,6 +41,8 @@ types:
             - IDENTIFIER
             - MEASURE
             - ATTRIBUTE
+            - START_TIME
+            - STOP_TIME
 
       temporalityType?:
           type: string
@@ -60,6 +72,7 @@ types:
           - POINT
           - POLYGON
           - LINE
+          - ADMINISTRATIVE_LEVEL
 
       mandatory?:
         type: boolean
