@@ -1,0 +1,47 @@
+{
+    "id": "MeasurementUnit",
+    "name": [
+      {
+        "languageCode": "nb",
+        "languageText": "Måleenhet"
+      }
+    ],
+    "description": [
+      {
+        "languageCode": "nb",
+        "languageText": "Beskrivelse av måleenhet"
+      }
+    ],
+    "propertyTranslate": [
+      {
+        "propertyName": "conversionRule",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "Konverteringsregel"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av konverteringsregel"
+          }
+        ]
+      },
+      {
+        "propertyName": "abbreviation",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "Forkortelse"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av forkortelse"
+          }
+        ]
+      }
+    ]
+}

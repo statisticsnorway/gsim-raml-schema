@@ -1,0 +1,31 @@
+#%RAML 1.0 Library
+uses:
+  PropertyTranslate: ./abstract/PropertyTranslate.raml
+  MultilingualText: ./abstract/MultilingualText.raml
+
+types:
+
+  ObjectTranslate:
+    description: Assign multilingual text to the name and description of an object and its properties.
+    displayName: Object language translation
+
+    properties:
+      id:
+        type: string
+        description: Unique identifier of the information object these translations are assigned to.
+        displayName: Id
+
+      name:
+        type: MultilingualText.MultilingualText[]
+        description: Translations for the name of the object.
+        displayName: Name
+
+      description?:
+        type: MultilingualText.MultilingualText[]
+        description: Translations for the description of the object.
+        displayName: Description
+
+      propertyTranslate?:
+        type: PropertyTranslate.PropertyTranslate[]
+
+    example: !include ../examples/_main/ObjectTranslate_MeasurementUnit.json

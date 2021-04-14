@@ -1,0 +1,62 @@
+{
+    "id": "populationType",
+    "name": [
+      {
+        "languageCode": "nb",
+        "languageText": "Populasjonstype"
+      }
+    ],
+    "description": [
+      {
+        "languageCode": "nb",
+        "languageText": "Beskrivelse av populasjonstype"
+      }
+    ],
+    "propertyTranslate": [
+      {
+        "propertyName": "TARGET",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "Mål"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av mål"
+          }
+        ]
+      },
+      {
+        "propertyName": "SURVEY",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "Undersøkelse"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av undersøkelse"
+          }
+        ]
+      },
+      {
+        "propertyName": "FRAME",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "Ramme"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av ramme"
+          }
+        ]
+      }
+    ]
+}
