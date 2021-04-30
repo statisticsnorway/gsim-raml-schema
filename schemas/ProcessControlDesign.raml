@@ -4,11 +4,11 @@ uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
-
   ProcessControlDesign:
     description: The specification of the decision points required during the execution of a Business Process.
     displayName: Process control design
     type: IdentifiableArtefact.IdentifiableArtefact
+
     properties:
       rules?:
         type: string[]
@@ -21,4 +21,3 @@ types:
         (Link.types): [ProcessControl]
 
     #example: !include ../examples/ProcessControlDesignExample.json
-

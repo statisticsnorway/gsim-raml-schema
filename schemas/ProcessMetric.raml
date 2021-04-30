@@ -4,12 +4,11 @@ uses:
   ProcessOutput: ./abstract/ProcessOutput.raml
 
 types:
-
   ProcessMetric:
     description: A Process Output whose purpose is to measure and report some aspect of how the Process Step performed during execution.
     displayName: Process metric
-    type: [ IdentifiableArtefact.IdentifiableArtefact, ProcessOutput.ProcessOutput]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, ProcessOutput.ProcessOutput ]
+
     properties:
 
     #example: !include ../examples/Processmetric.json
-

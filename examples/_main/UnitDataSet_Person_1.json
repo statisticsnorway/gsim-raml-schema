@@ -12,6 +12,7 @@
       "languageText": "Persons with income in Norway per 2018-01-01"
     }
   ],
+  "valuation": "SENSITIVE",
   "administrativeStatus": "OPEN",
   "version": "1.0.0",
   "versionValidFrom": "2018-01-01T00:00:00.000Z",
@@ -20,7 +21,6 @@
   "createdBy": "BNJ",
   "unitDataStructure": "/UnitDataStructure/cd3ecd46-c090-4bc6-80fb-db758eeb10fd",
   "dataSetState": "INPUT_DATA",
-  "temporalityType": "STATUS",
   "dataExistsFromDate": "2018-01-01T00:00:00.000Z",
   "dataExistsUntilDate": "2018-01-01T00:00:00.000Z",
   "dataSourcePath": "https://some.data.api/persondata",

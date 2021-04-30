@@ -3,13 +3,12 @@ uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
 types:
-
   Rule:
     description: A specific mathematical or logical expression which can be evaluated to determine specific behavior.
     displayName: Rule
     type: IdentifiableArtefact.IdentifiableArtefact
-    properties:
 
+    properties:
       algorithm?:
         type: string
         description: The rule expressed as an algorithm.

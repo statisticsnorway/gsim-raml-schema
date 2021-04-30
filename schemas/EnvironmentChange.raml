@@ -4,11 +4,10 @@ uses:
   StatisticalNeed: ./abstract/StatisticalNeed.raml
 
 types:
-
   EnvironmentChange:
     description: A requirement for change  that originates from a change in the operating environment of the statistical organization.
     displayName: Environment change
-    type: [IdentifiableArtefact.IdentifiableArtefact, StatisticalNeed.StatisticalNeed]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, StatisticalNeed.StatisticalNeed ]
 
     properties:
       environmentChangeType:
@@ -43,5 +42,5 @@ types:
         type: string
         description: Other change
         displayName: Other change
-    #example: !include ../examples/BusinessFunctionExample.json
 
+    #example: !include ../examples/BusinessFunctionExample.json

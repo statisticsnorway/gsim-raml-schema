@@ -3,15 +3,18 @@ uses:
   Link: ./annotation/Link.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
 
-
 types:
-
   ProcessStepInstance:
     description: An executed step in a Business Process. A Process Step Instance specifies the actual inputs to and outputs from for an occurrence of a Process Step.
     displayName: Process step instance
-    type: [ IdentifiableArtefact.IdentifiableArtefact]
+    type: IdentifiableArtefact.IdentifiableArtefact
 
     properties:
+      processExecutionCode:
+        type: string
+        displayName: Process execution code
+        description: The action that took place as executable code
+
       parameterInputs?:
         type: string[]
         displayName: Parameter inputs
@@ -37,10 +40,9 @@ types:
         displayName: Process metrics
         (Link.types): [ProcessMetric]
 
-      processExecutionLogs?:
-        type: string[]
-        displayName: Process execution logs
+      processExecutionLog:
+        type: string
+        displayName: Process execution log
         (Link.types): [ProcessExecutionLog]
 
-    #example: !include ../examples/ProcessStepInstance.json
-
+    example: !include ../examples/_main/ProcessStepInstance_Test.json

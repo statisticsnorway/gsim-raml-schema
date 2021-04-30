@@ -27,5 +27,5 @@
     "createdDate": "1985-01-01T15:00:00.000Z",
     "createdBy": "OHV",
     "dataType": "STRING",
-    "klassUrl": "https://www.ssb.no/klass/klassifikasjoner/19"
+    "klassUrn": "klass:klassifikasjoner:19"
 }

@@ -1,5 +1,6 @@
 ﻿#%RAML 1.0 Library
 uses:
+  Link: ./annotation/Link.raml
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
   ValueDomain: ./abstract/ValueDomain.raml
 
@@ -7,9 +8,13 @@ types:
   DescribedValueDomain:
     description: A Value Domain defined by an expression.
     displayName: Described value domain
-    type: [IdentifiableArtefact.IdentifiableArtefact, ValueDomain.ValueDomain]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, ValueDomain.ValueDomain ]
 
     properties:
+      measurementUnit?:
+        type: string
+        displayName: Measurement unit
+        (Link.types): [MeasurementUnit]
 
       #TODO: Do we need these, or can it be businessrules ?
       minValue?:

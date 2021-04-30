@@ -5,7 +5,6 @@ uses:
   AdministrativeDetails: AdministrativeDetails.raml
 
 types:
-
   IdentifiableArtefact:
     description: IdentifiableArtefact is reusable abstract object (type). All identifiable objects inherits all attributes from this object (type).
 
@@ -24,6 +23,11 @@ types:
         type: MultilingualText.MultilingualText[]
         description: The description of the information object
         displayName: Description
+
+      shortName?:
+        type: string
+        description: A short technical name. (Avoid special characters not supported as variable names in common programming languages).
+        displayName: Short name
 
       administrativeStatus?:
         type: string

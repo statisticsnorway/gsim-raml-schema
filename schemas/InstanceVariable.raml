@@ -10,12 +10,22 @@ types:
     type: IdentifiableArtefact.IdentifiableArtefact
 
     properties:
-      representedVariable:
+      representedVariable?:
         type: string
         displayName: Represented variable
         (Link.types): [RepresentedVariable]
+            
+      valuation?:
+        type: string
+        description: Classification of the value or damage potential of a dataset
+        displayName: Valuation
+        enum:  
+          - SENSITIVE  # 1
+          - SHIELDED   # 2
+          - INTERNAL   # 3
+          - OPEN       # 4
 
-      population:
+      population?:
         type: string
         displayName: Population
         (Link.types): [Population]
@@ -31,51 +41,48 @@ types:
             - IDENTIFIER
             - MEASURE
             - ATTRIBUTE
+            - START_TIME
+            - STOP_TIME
 
-      shortName:
-        type: string
-        description: A short technical name in CAPITAL LETTERS. Use underscore as word separator (no other special characters allowed).
-        displayName: Short name
+      temporalityType?:
+          type: string
+          description: Instance variable temporality type
+          displayName: Temporality type
+          enum:
+            - EVENT
+            - STATUS
+            - ACCUMULATED
+            - FIXED
 
       sentinelValueDomain?:
         type: string
         displayName: Sentinel value domain
         (Link.types): [EnumeratedValueDomain, DescribedValueDomain]
 
-      format?:
+      formatMask?:
         type: string
         description: This attribute describes the data-format of the instance variable. For example a date-format-mask.
         displayName: Format
 
-      identifierComponentIsUnique?:
-        type: boolean
-        description: For INDENTIFIER-components. Indicates if the key is unique.
-        displayName: Identifier component is unique
-
-      identifierComponentIsComposite?:
-        type: boolean
-        description: For INDENTIFIER-components. Indicates if the key is composite, e.g. person-identifier and date/time.
-        displayName: Identifier component is composite
-
-      dataStructureComponentRole?:
-        type: string
-        description: For INDENTIFIER-components or MEASURE-components. Specifies the type of role --> "entity", "count", "time", "geography" or "identity" (only INDENTIFIER-components).
-        displayName: Data structure component role
-        enum:
-          - ENTITY
-          - IDENTITY
-          - COUNT
-          - TIME
-          - GEO
-
       geoType?:
         type: string
-        description: If the component is a geolocation (dataStructureComponentRole is GEO) then there are different types
+        description: If the component is a geolocation then there are different types
         displayName: Geo type
         enum:
           - POINT
           - POLYGON
           - LINE
+          - ADMINISTRATIVE_LEVEL
 
+      mandatory?:
+        type: boolean
+        default: false
+        description: Is the variable mandatory or not
+        displayName: Mandatory
+
+      physicalDataType?:
+        type: string
+        description: Data type of instance variable
+        displayName: Data type   
 
     example: !include ../examples/_main/InstanceVariable_FamilyType.json

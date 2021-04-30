@@ -3,7 +3,6 @@ uses:
   Link: ../annotation/Link.raml
 
 types:
-
   DataSet:
     description: An organized collection of data.
 
@@ -19,6 +18,18 @@ types:
           - OUTPUT_DATA
           - DATA_PRODUCT
           - OTHER_DATA
+          - ARCHIVED_DATA
+          - TEMP
+
+      valuation:
+        type: string
+        description: Classification of the value or damage potential of a dataset
+        displayName: Valuation
+        enum:  
+          - SENSITIVE  # 1
+          - SHIELDED   # 2
+          - INTERNAL   # 3
+          - OPEN       # 4
 
       temporalityType?:
         type: string
@@ -27,8 +38,6 @@ types:
         enum:
           - EVENT
           - STATUS
-          - ACCUMULATED
-          - FIXED
 
       dataExistsFromDate?:
         type: datetime

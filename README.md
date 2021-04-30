@@ -1,5 +1,5 @@
 # gsim-raml-schema
-Statistics Norway is modernizing its core systems for statistical production. Statistics Norway implements a logical data model based on the UN standard [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model).
+Statistics Norway is modernizing its core systems for statistical production. Statistics Norway implements a logical data model based on the UNECE standard [Generic Statistical Information Model (GSIM)](https://statswiki.unece.org/display/gsim/Generic+Statistical+Information+Model).
 
 This project is documentation of the physical design using [RAML](https://raml.org/) (RESTful API Modeling Language).
 
@@ -190,7 +190,7 @@ Structures|Dimensional Data Set|![usable](http://progressed.io/bar/50)|
 Structures|Information Resource|![usable](http://progressed.io/bar/80)| Abstract Object
 Structures|Data Resource|![usable](http://progressed.io/bar/80)|
 Structures|Logical Record|![usable](http://progressed.io/bar/90)|
-Structures|Record Relationship|![usable](http://progressed.io/bar/80)|
+Structures|Record Relationship|![usable](http://progressed.io/bar/100)| Implemented as a parent-child link (attribute) in `Logical Record`
 Structures|Statistical Register Persons|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `DataResource.dataResourceType`
 Structures|Establishment Enterprise Register|![usable](http://progressed.io/bar/100)| Implemented as `ENUM` in `DataResource.dataResourceType`
 Business|Assessment|![usable](http://progressed.io/bar/50)|
@@ -231,7 +231,7 @@ Business|TransformedOutput|![usable](http://progressed.io/bar/50)|
 Objects in Concepts group regarding classifications and codelists has not yet been addressed in RAML due to the use of an existing system for this in Statistics Norway  (https://www.ssb.no/en/klass/).
 
 In `EnumeratedVariableDomain` there is an attribute that links to this system:
-```KlassUrl
+```KlassUrn
 #%RAML 1.0 Library
 uses:
   IdentifiableArtefact: ./abstract/IdentifiableArtefact.raml
@@ -243,10 +243,10 @@ types:
     type: [IdentifiableArtefact.IdentifiableArtefact, ValueDomain.ValueDomain]
 
     properties:
-      klassUrl:
+      klassUrn:
         type: string
-        description: The url to KLASS (Statistics Norways system for Classifications and Codelists).
-        displayName: Klass Url
+        description: The urn to KLASS (Statistics Norways system for Classifications and Codelists).
+        displayName: Klass Urn
 
 ```
 
@@ -274,7 +274,7 @@ Example:
     "createdDate": "2006-01-01T00:00:00.000Z",
     "createdBy": "OHV",
     "dataType": "STRING",
-    "klassUrl": "https://www.ssb.no/en/klass/klassifikasjoner/17"
+    "klassUrn": "klass:klassifikasjoner:17"
 }
 
 ```
@@ -283,3 +283,6 @@ Example:
 KLASS (Statistics Norways system for classifications and Codelists) is also based on GSIM, and will hopefully in the future be a part of the RAML spesifications of this project.
 
 See KLASS on Github: https://github.com/statisticsnorway/klass
+
+# Local setup and schema addition
+In order to setup a local LDS server with GSIM schemas and browse existetnt data stuctures follow steps listed on Wiki https://github.com/statisticsnorway/gsim-raml-schema/wiki

@@ -4,11 +4,10 @@ uses:
   ProcessInput: ./abstract/ProcessInput.raml
 
 types:
-
   ParameterInput:
     description: Inputs used to specify which configuration should be used for a specific Process Step which has been designed to be configurable.
     displayName: Parameter input
-    type: [IdentifiableArtefact.IdentifiableArtefact, ProcessInput.ProcessInput]
+    type: [ IdentifiableArtefact.IdentifiableArtefact, ProcessInput.ProcessInput ]
 
     properties:
       parameterDataType:
