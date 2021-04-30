@@ -1,0 +1,100 @@
+{
+    "id": "dataStructureComponentType",
+    "name": [
+      {
+        "languageCode": "nb",
+        "languageText": "DataStructureKomponentType"
+      }
+    ],
+    "description": [
+      {
+        "languageCode": "nb",
+        "languageText": "Komponenttypen for datastruktur (identifikator, mål eller attributt) for forekomstvariabelen."
+      }
+    ],
+    "propertyTranslate": [
+      {
+        "propertyName": "IDENTIFIER",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "IDENTIFIKASJON"
+          },
+          {
+            "languageCode": "en",
+            "languageText": "ENGLISH-IDENTIFIER"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av identifikasjon"
+          },
+          {
+            "languageCode": "en",
+            "languageText": "Descriptions of identifier"
+          }
+        ]
+      },
+      {
+        "propertyName": "MEASURE",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "MÅL"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av mål"
+          }
+        ]
+      },
+      {
+        "propertyName": "ATTRIBUTE",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "EGENSKAP"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av egenskap"
+          }
+        ]
+      },
+      {
+        "propertyName": "START_TIME",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "START_TID"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av start tid"
+          }
+        ]
+      },
+      {
+        "propertyName": "STOP_TIME",
+        "name": [
+          {
+            "languageCode": "nb",
+            "languageText": "STOP_TID"
+          }
+        ],
+        "description": [
+          {
+            "languageCode": "nb",
+            "languageText": "Beskrivelse av stop_tid"
+          }
+        ]
+      }
+    ]
+}
