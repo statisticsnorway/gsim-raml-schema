@@ -1,0 +1,15 @@
+{
+    "id": "RepresentedVariable",
+    "name": [
+      {
+        "languageCode": "nb",
+        "languageText": "Representert variabel"
+      }
+    ],
+    "description": [
+      {
+        "languageCode": "nb",
+        "languageText": "Beskrivelse av representert variabel"
+      }
+    ]
+}
